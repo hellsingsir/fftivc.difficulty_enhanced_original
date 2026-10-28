@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+This table file is used to overwrite the game's hardcoded status effects table.
+
+Refer to: https://ffhacktics.com/wiki/Status_Effects
+
+You can use this file as a base to edit Status Effect data in your mod.
+Simply copy this file to your mod's folder under FFTIVC/tables/<enhanced/classic/combined>/StatusEffectData.xml.
+
+IMPORTANT: You are free to remove everything and **SHOULD ONLY LEAVE ELEMENTS THAT YOU HAVE EDITED** to avoid conflicts between mods.
+Only properties that are actually included in this file will be tracked as edited. Properties not edited will inherit their
+value from the original table or, from other mods making changes depending on mod order.
+
+IMPORTANT 2: The Id property must NOT be removed for nodes that you're leaving here!
+
+IMPORTANT 3: Id cannot be more than 39 (hardcoded table size is 40).
+
+For available flags, refer to https://github.com/Nenkai/fftivc.utility.modloader/blob/master/fftivc.utility.modloader.Interfaces/Tables/Structures/STATUS_EFFECT_DATA.cs
+-->
+
+<StatusEffectTable>
+  <Version>1</Version>
+  <Entries>
+    <StatusEffect>
+      <Id>25</Id> <!-- Poison / 毒 / Poison / Gift -->
+      <Unused_0x00>0</Unused_0x00>
+      <Unused_0x01>0</Unused_0x01>
+      <Order>12</Order>
+      <Counter>72</Counter> <!-- Poison Duration x2 36 Ticks to 72 Ticks -->
+      <CheckFlags>PoisonRegen</CheckFlags>
+      <CancelFlags>
+        <StatusEffectType>Poison</StatusEffectType>
+      </CancelFlags>
+      <NoStackFlags>
+        <StatusEffectType>Crystal</StatusEffectType>
+        <StatusEffectType>KO</StatusEffectType>
+        <StatusEffectType>Jumping</StatusEffectType>
+      </NoStackFlags>
+    </StatusEffect>
+    <StatusEffect>
+      <Id>29</Id> <!-- Haste / ヘイスト / Hâte / Hast -->
+      <Unused_0x00>0</Unused_0x00>
+      <Unused_0x01>0</Unused_0x01>
+      <Order>27</Order>
+      <Counter>32</Counter> <!-- Haste buffed from 24 to 32 -->
+      <CheckFlags>0</CheckFlags>
+      <CancelFlags>
+        <StatusEffectType>Haste</StatusEffectType>
+      </CancelFlags>
+      <NoStackFlags>
+        <StatusEffectType>Crystal</StatusEffectType>
+        <StatusEffectType>KO</StatusEffectType>
+        <StatusEffectType>Jumping</StatusEffectType>
+      </NoStackFlags>
+    </StatusEffect>
+    <StatusEffect>
+      <Id>30</Id> <!-- Slow / スロウ / Lenteur / Gemach -->
+      <Unused_0x00>0</Unused_0x00>
+      <Unused_0x01>0</Unused_0x01>
+      <Order>34</Order>
+      <Counter>24</Counter> <!-- Slow buffed from 20 to 24 -->
+      <CheckFlags>FreezeCT, Check10, Check12, CantReact</CheckFlags>
+      <CancelFlags />
+      <NoStackFlags>
+        <StatusEffectType>Crystal</StatusEffectType>
+        <StatusEffectType>KO</StatusEffectType>
+        <StatusEffectType>Jumping</StatusEffectType>
+      </NoStackFlags>
+    </StatusEffect>
+  </Entries>
+</StatusEffectTable>

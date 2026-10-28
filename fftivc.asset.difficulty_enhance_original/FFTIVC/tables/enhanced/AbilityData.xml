@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+This table file is used to overwrite the game's hardcoded ability table.
+
+Refer to: https://ffhacktics.com/wiki/Ability_Data
+This table links to nex table 'Ability'. Some properties edited here may be overriden by the nex table.
+
+You can use this file as a base to edit Ability data in your mod.
+Simply copy this file to your mod's folder under FFTIVC/tables/<enhanced/classic/combined>/AbilityData.xml.
+
+IMPORTANT: You are free to remove everything and **SHOULD ONLY LEAVE ELEMENTS THAT YOU HAVE EDITED** to avoid conflicts between mods.
+Only properties that are actually included in this file will be tracked as edited. Properties not edited will inherit their
+value from the original table or, from other mods making changes depending on mod order.
+
+IMPORTANT 2: The Id property must NOT be removed for nodes that you're leaving here!
+
+IMPORTANT 3: Id cannot be more than 511 (hardcoded table size is 512).
+
+For available flags, refer to https://github.com/Nenkai/fftivc.utility.modloader/blob/master/fftivc.utility.modloader.Interfaces/Tables/Structures/ABILITY_COMMON_DATA.cs
+-->
+
+<AbilityTable>
+  <Version>1</Version>
+  <Entries>
+     <Ability>
+      <Id>155</Id> <!-- Judgment Blade / 不動無明剣 / Ignorance indéfectible / Klinge des Urteils -->
+      <JPCost>100</JPCost>
+      <ChanceToLearn>100</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, HP, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>156</Id> <!-- Cleansing Strike / 乱命割殺打 / Frappe purifiante / Reinigender Schlag -->
+      <JPCost>400</JPCost>
+      <ChanceToLearn>80</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, HP, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>157</Id> <!-- Northswain's Strike / 北斗骨砕打 / Frappe de l'étoile polaire / Großer Bärenbrecher -->
+      <JPCost>500</JPCost>
+      <ChanceToLearn>70</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, HP, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>158</Id> <!-- Hallowed Bolt / 無双稲妻突き / Éclair inimitable / Heiliger Blitz -->
+      <JPCost>700</JPCost>
+      <ChanceToLearn>60</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, HP, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>159</Id> <!-- Divine Ruination / 聖光爆裂破 / Ire céleste / Heilige Verheerung -->
+      <JPCost>800</JPCost>
+      <ChanceToLearn>50</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, HP, PhysicalAttack, LinearAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>160</Id> <!-- Crush Armor / 強甲破点突き / Ravage de plastron / Panzerspalter -->
+      <JPCost>200</JPCost>
+      <ChanceToLearn>90</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, Unequip, HP, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>161</Id> <!-- Crush Helm / 星天爆撃打 / Destruction de crâne / Himmelssturz -->
+      <JPCost>400</JPCost>
+      <ChanceToLearn>80</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, Unequip, HP, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>162</Id> <!-- Crush Weapon / 冥界恐叫打 / Pulvérisation d'arme / Höllenschrei -->
+      <JPCost>500</JPCost>
+      <ChanceToLearn>70</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, Unequip, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>163</Id> <!-- Crush Accessory / 咬撃氷狼破 / Broyage d'accessoire / Wolfsbiss -->
+      <JPCost>800</JPCost>
+      <ChanceToLearn>60</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, Unequip, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>164</Id> <!-- Duskblade / 暗の剣 / Aspiration obscure / Dunkelschwert -->
+      <JPCost>500</JPCost>
+      <ChanceToLearn>50</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, MP, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>165</Id> <!-- Shadowblade / 闇の剣 / Saignée obscure / Schattenklinge -->
+      <JPCost>100</JPCost>
+      <ChanceToLearn>100</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, HP, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>196</Id> <!-- Magicksap / マジックルーイン / Déclin de magie / Magieerschöpfung -->
+      <JPCost>0</JPCost>
+      <ChanceToLearn>100</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, MP, AffectedByFaith, MagicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>197</Id> <!-- Speedsap / スピードルーイン / Déclin de vitesse / Tempoerschöpfung -->
+      <JPCost>0</JPCost>
+      <ChanceToLearn>100</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, AddStatus, AffectedByFaith, MagicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>198</Id> <!-- Powersap / パワールーイン / Déclin de force / Krafterschöpfung -->
+      <JPCost>0</JPCost>
+      <ChanceToLearn>100</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, Stats, AffectedByFaith, MagicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>199</Id> <!-- Mindsap / マインドルーイン / Déclin d'esprit / Geistschmelze -->
+      <JPCost>0</JPCost>
+      <ChanceToLearn>100</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, Stats, AffectedByFaith, MagicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>328</Id> <!-- Bad Breath / 臭い息 / Mauvaise haleine / Mundgeruch -->
+      <JPCost>0</JPCost>
+      <ChanceToLearn>100</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, AddStatus, UsableByAI</AIBehaviorFlags> <!-- Changed AIBehaviorFlag: CancelStatus to AddStatus -->
+    </Ability>
+    <Ability>
+      <Id>359</Id> <!-- Neurotoxin (New Ability) -->
+      <JPCost>300</JPCost>
+      <ChanceToLearn>50</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, AddStatus, Evadeable, EvadeWithMotion, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>360</Id> <!-- Time Blast (New Ability) -->
+      <JPCost>300</JPCost>
+      <ChanceToLearn>50</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, AddStatus, Evadeable, EvadeWithMotion, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>361</Id> <!-- Divine Strike (New Ability) -->
+      <JPCost>500</JPCost>
+      <ChanceToLearn>100</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetEnemies, HP, PhysicalAttack, Evadeable, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>362</Id> <!-- Adrenaline Rush (New Ability) -->
+      <JPCost>500</JPCost>
+      <ChanceToLearn>100</ChanceToLearn>
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>TargetAllies, AddStatus, HP, TargetMap, OnlyHitsAlliesOrSelf, UsableByAI</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>363</Id> <!-- DEATH ULTIMA (New Ability) -->
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>OnlyHitsEnemies, TargetEnemies, TargetMap, AffectedByFaith, MagicalAttack, Evadeable, UsableByAI, HP</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>364</Id> <!-- PLUTON (New Ability) -->
+      <Flags>DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>OnlyHitsEnemies, TargetEnemies, TargetMap, AffectedByFaith, MagicalAttack, Evadeable, UsableByAI, HP</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>365</Id> <!-- Holy Raikami (New Ability) -->
+      <ChanceToLearn>50</ChanceToLearn>
+      <Flags>LearnOnHit, DisplayAbilityName</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>AffectedByFaith, Evadeable, EvadeWithMotion, MagicalAttack, Reflectable, AddStatus, Silence, UsableByAI, HP, CheckCT_Target, TargetEnemies</AIBehaviorFlags>
+    </Ability>
+    <Ability>
+      <Id>366</Id> <!-- Guriin Shinigami (New Ability) -->
+      <ChanceToLearn>70</ChanceToLearn>
+      <Flags>DisplayAbilityName, LearnOnHit</Flags>
+      <AbilityType>Normal</AbilityType>
+      <AIBehaviorFlags>Evadeable, HP, Reflectable, AddStatus, AffectedByFaith, MagicalAttack, TargetEnemies, Silence, UsableByAI, EvadeWithMotion, CheckCT_Target</AIBehaviorFlags>
+    </Ability>
+  </Entries>
+</AbilityTable>

@@ -1,0 +1,70 @@
+{
+  "ModId": "fftivc.asset.difficulty_enhance_original",
+  "ModName": "FFTIVC: Difficulty Enhanced - Original Edition",
+  "ModAuthor": "ninjere",
+  "ModVersion": "1.0.1",
+  "ModDescription": "FFT IVC Difficulty Enhanced - PSX Translation: Mod Difficulty, Innate Abilities, New Abilities, Stat Growth Rebalance, Sword Skill Evasion, Story Battle Level Scaling, Magic CT Rebalance, Cloud Limit Rework, Enemies\u002B, Monsters\u002B, Lucavi Demons\u002B",
+  "ModDll": "",
+  "ModIcon": "altima.jpg",
+  "ModR2RManagedDll32": "",
+  "ModR2RManagedDll64": "",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "Tags": [],
+  "CanUnload": null,
+  "HasExports": null,
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "fftivc.asset.difficulty_enhance.ReleaseMetadata.json",
+  "IgnoreRegexes": [
+    ".*\\.json",
+    "fftivc\\.asset\\.difficulty_enhance\\.nuspec"
+  ],
+  "IncludeRegexes": [
+    "\\.deps\\.json",
+    "\\.runtimeconfig\\.json",
+    "ModConfig\\.json",
+    "ModConfig\\.json"
+  ],
+  "PluginData": {
+    "GitHubDependencies": {
+      "IdToConfigMap": {
+        "fftivc.utility.modloader": {
+          "Config": {
+            "UserName": "Nenkai",
+            "RepositoryName": "fftivc.utility.modloader",
+            "UseReleaseTag": true,
+            "AssetFileName": "Mod.zip"
+          },
+          "ReleaseMetadataName": "fftivc.utility.modloader.ReleaseMetadata.json"
+        },
+        "Reloaded.Memory.SigScan.ReloadedII": {
+          "Config": {
+            "UserName": "Reloaded-Project",
+            "RepositoryName": "Reloaded.Memory.SigScan",
+            "UseReleaseTag": false,
+            "AssetFileName": "Mod.zip"
+          },
+          "ReleaseMetadataName": "Reloaded.Memory.SigScan.ReloadedII.ReleaseMetadata.json"
+        },
+        "reloaded.sharedlib.hooks": {
+          "Config": {
+            "UserName": "Sewer56",
+            "RepositoryName": "Reloaded.SharedLib.Hooks.ReloadedII",
+            "UseReleaseTag": true,
+            "AssetFileName": "reloaded.sharedlib.hooks.zip"
+          },
+          "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
+        }
+      }
+    }
+  },
+  "IsUniversalMod": false,
+  "ModDependencies": [
+    "fftivc.utility.modloader"
+  ],
+  "OptionalDependencies": [],
+  "SupportedAppId": [
+    "fft_enhanced.exe"
+  ],
+  "ProjectUrl": ""
+}

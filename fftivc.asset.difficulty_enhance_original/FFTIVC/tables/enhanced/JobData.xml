@@ -1,0 +1,4027 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+This table file is used to overwrite the game's hardcoded job table.
+
+Refer to: https://ffhacktics.com/wiki/Job_Data
+This table links to nex table 'Job'. Some properties edited here may be overriden by the nex table.
+
+You can use this file as a base to edit Job data in your mod.
+Simply copy this file to your mod's folder under FFTIVC/tables/<enhanced/classic/combined>/JobData.xml.
+
+IMPORTANT: You are free to remove everything and **SHOULD ONLY LEAVE ELEMENTS THAT YOU HAVE EDITED** to avoid conflicts between mods.
+Only properties that are actually included in this file will be tracked as edited. Properties not edited will inherit their
+value from the original table or, from other mods making changes depending on mod order.
+
+IMPORTANT 2: The Id property must NOT be removed for nodes that you're leaving here!
+
+IMPORTANT 3: Id cannot be more than 175 (hardcoded table size is 176).
+
+For available flags, refer to https://github.com/Nenkai/fftivc.utility.modloader/blob/master/fftivc.utility.modloader.Interfaces/Tables/Structures/JOB_DATA.cs
+-->
+
+<JobTable> <!-- Most Jobs have edited scaling, such as HP/MPGrowth, HP/MP Multiplier, or Speed. Some classes have new equippable items. Zodiac Demons are much more powerful, exception to Serpentarius. -->
+  <Version>1</Version>
+  <Entries>
+    <Job>
+      <Id>1</Id> <!-- Squire / 見習い戦士 / Écuyer / Knappe -->
+      <JobCommandId>25</JobCommandId>
+      <InnateAbilityId1>486</InnateAbilityId1> <!-- Move +1 -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Flail, Sword, Knife, Shield, Unarmed</EquippableItems> <!-- Added Shield -->
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>120</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>105</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>110</PAMultiplier>
+      <MAGrowth>48</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>2</Id> <!-- Squire / 見習い戦士 / Écuyer / Knappe --> <!-- Ramza Ch.2 Mercenary Stats -->
+      <JobCommandId>26</JobCommandId>
+      <InnateAbilityId1>486</InnateAbilityId1> <!-- Move +1 -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, Armor, HairAdornment, Hat, Helmet, Shield, Flail, KnightSword, Sword, Knife, Unarmed</EquippableItems> <!-- Added KnightSword -->
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>125</HPMultiplier> <!-- HPMultiplier from 120 to 125 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>105</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>48</PAGrowth> <!-- PAGrowth from 50 to 48 -->
+      <PAMultiplier>112</PAMultiplier> <!--PAMultiplier from 110 to 112 -->
+      <MAGrowth>42</MAGrowth> <!-- MAGrowth from 48 to 42 -->
+      <MAMultiplier>120</MAMultiplier> <!-- MAMultiplier from 100 to 120 -->
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>3</Id> <!-- Gallant Knight / 見習い天騎士 / Preux de l'empyrée / Himmelsknappe --> <!-- Ramza, Ch.4 Stats -->
+      <JobCommandId>27</JobCommandId>
+      <InnateAbilityId1>486</InnateAbilityId1> <!-- Move +1 -->
+      <InnateAbilityId2>467</InnateAbilityId2> <!-- Innate: Magic ATK Boost -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, Armor, HairAdornment, Hat, Helmet, Shield, Flail, KnightSword, Sword, Knife, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth> <!-- HPGrowth Buffed from 11 to 10 -->
+      <HPMultiplier>130</HPMultiplier> <!-- HPMultiplier buffed from 120 to 130 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>110</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>47</PAGrowth> <!-- PAGrowth buffed from 50 to 47 -->
+      <PAMultiplier>120</PAMultiplier> <!-- PAMultiplier buffed from 115 to 120 -->
+      <MAGrowth>35</MAGrowth> <!-- MAGrowth buffed from 48 to 40 to 35 -->
+      <MAMultiplier>130</MAMultiplier> <!-- MAMultiplier buffed from 115 to 122 to 130. -->
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>4</Id> <!-- Squire / 見習い戦士 / Écuyer / Knappe -->
+      <JobCommandId>28</JobCommandId>
+      <InnateAbilityId1>486</InnateAbilityId1> <!-- Move +1 -->
+      <InnateAbilityId2>463</InnateAbilityId2> <!-- JP Boost -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Flail, Sword, Knife, Shield, Unarmed</EquippableItems> <!-- Added Shield -->
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>120</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>110</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>5</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>5</Id> <!-- Holy Knight / ホーリーナイト / Chevalier sacré / Heiliger Ritter -->
+      <JobCommandId>29</JobCommandId>
+      <InnateAbilityId1>475</InnateAbilityId1> <!-- Innate: Maintenance -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, Armor, HairAdornment, Helmet, Shield, KnightSword, Sword, Knife, Unarmed</EquippableItems> <!-- Replaced Flail with KnightSword -->
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>130</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>105</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Doom, Charm, Toad, Chicken, Vampire, Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>7</Id> <!-- Squire / 見習い戦士 / Écuyer / Knappe -->
+      <JobCommandId>31</JobCommandId>
+      <InnateAbilityId2>486</InnateAbilityId2> <!-- Move +1 -->
+      <InnateAbilityId2>463</InnateAbilityId2> <!-- JP Boost -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Flail, Sword, Knife, Shield, Unarmed</EquippableItems> <!-- Added Shield -->
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>120</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>110</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>15</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>8</Id> <!-- Ark Knight / アークナイト / Archichevalier / Erzritter --> <!-- Delita Ch.4, Zalmo Encounter ? or perhaps Zalbag? -->
+      <JobCommandId>75</JobCommandId>
+      <InnateAbilityId1>465</InnateAbilityId1> <!-- ATK Boost -->
+      <InnateAbilityId2>466</InnateAbilityId2> <!-- DEF Boost -->
+      <InnateAbilityId3>449</InnateAbilityId3> <!-- Reflexes -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, KnightSword, Sword, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>168</HPMultiplier>
+      <MPGrowth>12</MPGrowth>
+      <MPMultiplier>80</MPMultiplier>
+      <SpeedGrowth>97</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>38</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>48</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion> <!-- 10 to 20 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>9</Id> <!-- Rune Knight / ルーンナイト / Chevalier runique / Runenritter --> <!-- bumass dycedarg -->
+      <JobCommandId>70</JobCommandId>
+		  <InnateAbilityId1>466</InnateAbilityId1>
+      <InnateAbilityId2>468</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, KnightSword, Sword, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>170</HPMultiplier>
+      <MPGrowth>9</MPGrowth>
+      <MPMultiplier>103</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>48</PAGrowth>
+      <PAMultiplier>105</PAMultiplier>
+      <MAGrowth>42</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion> <!-- 10 to 20 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Doom, Disable, Immobilize, Sleep, Charm, Stop, Poison, Berserk, Invisible, Reraise, Vampire, Confuse, Traitor, Stone, Undead, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>12</Id> <!-- Princess / プリンセス / Princesse / Prinzessin -->
+      <JobCommandId>36</JobCommandId>
+      <InnateAbilityId1>466</InnateAbilityId1> <!-- DEF Boost -->
+      <InnateAbilityId2>468</InnateAbilityId2> <!-- Magic DEF Boost -->
+      <InnateAbilityId3>494</InnateAbilityId3> <!-- Move-MP UP -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Shield, Robe, Clothing, HairAdornment, Hat, Staff, Unarmed</EquippableItems> <!-- Added Shield -->
+      <HPGrowth>8</HPGrowth> <!-- HPGrowth from 11 to 8 -->
+      <HPMultiplier>110</HPMultiplier> <!-- HPMultiplier from 100 to 110 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor, Stone</ImmuneStatus>
+      <StartingStatus>Protect, Shell</StartingStatus> <!-- StartingStatus changed from None to Protect, Shell -->
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>13</Id> <!-- Sword Saint / 剣聖 / Maître des lames / Schwertheiliger -->
+      <JobCommandId>74</JobCommandId>
+      <InnateAbilityId1>465</InnateAbilityId1> <!-- Innate Ability ATTACK UP -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, Armor, HairAdornment, Hat, Helmet, Shield, Katana, KnightSword, Sword, NinjaBlade, Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth> <!-- HPGrowth Buffed from 10 to 9 -->
+      <HPMultiplier>160</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>120</MPMultiplier>
+      <SpeedGrowth>98</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth> <!-- PAGrowth from 42 to 40 -->
+      <PAMultiplier>125</PAMultiplier> <!-- PAMultiplier from 122 to 125 -->
+      <MAGrowth>42</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>15</Id> <!-- Dragonkin / ドラグナー / Dragonide / Dragonoid -->
+       <JobCommandId>43</JobCommandId>
+      <InnateAbilityId1>473</InnateAbilityId1>
+      <InnateAbilityId2>477</InnateAbilityId2> <!-- Dual Wield -->
+      <InnateAbilityId3>478</InnateAbilityId3>
+      <InnateAbilityId4>470</InnateAbilityId4> <!-- Tame -->
+      <EquippableItems>Perfume, Armlet, Ring, HairAdornment, Bag, Robe, Clothing, Unarmed</EquippableItems> <!-- Added Clothing and Robe -->
+      <HPGrowth>5</HPGrowth>
+      <HPMultiplier>140</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>115</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth>
+      <SpeedMultiplier>120</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>38</MAGrowth>
+      <MAMultiplier>110</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>7</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>16</Id> <!-- Celebrant / ハイプリースト / Grand prêtre / Zelebrant --> <!-- Zalmo Priest ? -->
+      <JobCommandId>42</JobCommandId>
+      <InnateAbilityId1>0</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Pole, Book, Staff, Rod, Shield, Unarmed</EquippableItems> <!-- Added Shield -->
+      <HPGrowth>7</HPGrowth> <!-- HPGrowth from 10 to 7 -->
+      <HPMultiplier>177</HPMultiplier> <!-- HPMultiplier from 160 to 177 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>200</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth> <!-- SpeedGrowth from 120 to 100 -->
+      <SpeedMultiplier>110</SpeedMultiplier> <!-- SpeedMultiplier from 100 to 110 -->
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>90</PAMultiplier>
+      <MAGrowth>49</MAGrowth>
+      <MAMultiplier>150</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>9</CharacterEvasion>
+      <InnateStatus>None</InnateStatus> <!-- Added Immune Silence -->
+      <ImmuneStatus>Silence, Doom, Disable, Immobilize, Sleep, Charm, Stop, Poison, Toad, Chicken, Invisible, Reraise, Vampire, Traitor, Stone, Undead, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>17</Id> <!-- Fell Knight / ダークナイト / Chevalier occulte / Gefallener Ritter -->
+      <JobCommandId>39</JobCommandId>
+      <InnateAbilityId1>466</InnateAbilityId1> <!-- DEF UP -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, Sword, Unarmed</EquippableItems>
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>150</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>120</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>90</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>15</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Charm, Berserk, Invisible, Vampire, Traitor, Stone</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>20</Id> <!-- Cleric / クレリック / Clerc / Diakonisse --> <!-- Alma -->
+      <JobCommandId>76</JobCommandId>
+      <InnateAbilityId1>466</InnateAbilityId1> <!-- DEF Boost -->
+      <InnateAbilityId2>468</InnateAbilityId2> <!-- Magick DEF Boost -->
+      <InnateAbilityId3>467</InnateAbilityId3> <!-- Magic ATK Boost -->
+      <InnateAbilityId4>444</InnateAbilityId4> <!-- Distribute -->
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Staff, Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth> <!-- HPGrowth from 11 to 8 -->
+      <HPMultiplier>110</HPMultiplier> <!-- HPMultiplier from 90 to 110 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>150</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>115</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>160</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>24</CharacterEvasion>
+      <InnateStatus>Regen</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>KO</StartingStatus>
+      <AbsorbElements>Lightning, Dark</AbsorbElements> <!-- Absorbs Lightning and Dark -->
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>21</Id> <!-- Astrologer / 占星術士 / Astromancien / Astrologe -->
+      <JobCommandId>47</JobCommandId>
+      <InnateAbilityId1>466</InnateAbilityId1> <!-- DEF Boost -->
+      <InnateAbilityId2>482</InnateAbilityId2> <!-- Swiftspell -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Book, Shield, Unarmed</EquippableItems> <!-- Added Shield -->
+      <HPGrowth>6</HPGrowth> <!-- HP Growth rescaled from 10 to 6 -->
+      <HPMultiplier>120</HPMultiplier> <!-- HP Multiplier rescaled from 108 to 120 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>108</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth> <!-- SpeedGrowth from 95 to 85 -->
+      <SpeedMultiplier>130</SpeedMultiplier> <!-- SpeedMultiplier from 120 to 130 -->
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>55</MAGrowth>
+      <MAMultiplier>125</MAMultiplier>
+      <Move>3</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>25</CharacterEvasion> <!-- Evasion from 15 to 25 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Doom, Disable, Immobilize, Sleep, Charm, Toad, Chicken, Berserk, Invisible, Confuse, Traitor, Undead, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>22</Id> <!-- Machinist / 機工士 / Machiniste / Maschinist -->
+      <JobCommandId>38</JobCommandId>
+      <InnateAbilityId1>469</InnateAbilityId1> <!-- Innate: Concentrate -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Gun, Unarmed</EquippableItems>
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>100</HPMultiplier>
+      <MPGrowth>13</MPGrowth>
+      <MPMultiplier>75</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>115</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>95</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>18</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>23</Id> <!-- Fell Knight / ダークナイト / Chevalier occulte / Gefallener Ritter -->
+      <JobCommandId>32</JobCommandId>
+      <InnateAbilityId1>466</InnateAbilityId1> <!-- DEF UP -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, Sword, Unarmed</EquippableItems>
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>150</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>120</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>90</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>15</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>25</Id> <!-- Skyseer / 天道士 / Mage céleste / Astronomin --> <!-- Rafa's Guest Job -->
+      <JobCommandId>45</JobCommandId>
+      <InnateAbilityId1>466</InnateAbilityId1> <!-- DEF Boost -->
+      <InnateAbilityId2>468</InnateAbilityId2> <!-- Magic Def Boost -->
+      <InnateAbilityId3>441</InnateAbilityId3> <!-- Auto Potion -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Pole, Staff, Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth> <!-- HPGrowth rescaled from 11 to 8 -->
+      <HPMultiplier>110</HPMultiplier> <!-- HPMultiplier from 90 to 110 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth> <!-- SpeedGrowth from 100 to 85 -->
+      <SpeedMultiplier>115</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier> <!-- Rescaled from 80 to 100 -->
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>26</Id> <!-- Netherseer / 天冥士 / Mage chthonien / Paradoxon --> <!-- Malak's Job Skill -->
+      <JobCommandId>46</JobCommandId>
+      <InnateAbilityId1>477</InnateAbilityId1> <!-- Dual Wield -->
+      <InnateAbilityId2>467</InnateAbilityId2> <!-- Magic Boost -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, NinjaBlade, Hat, Pole, Staff, Unarmed</EquippableItems> <!-- Added NinjaBlade -->
+      <HPGrowth>8</HPGrowth> <!-- Rescaled from 10 to 8 -->
+      <HPMultiplier>110</HPMultiplier> <!-- Rescaled from 100 to 110 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>110</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>105</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>8</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>27</Id> <!-- Ark Knight / アークナイト / Archichevalier / Erzritter --> <!-- Marquis Elmdor's Job -->
+      <JobCommandId>59</JobCommandId>
+      <InnateAbilityId1>476</InnateAbilityId1> <!-- Added Innate Doublehand -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, Armor, HairAdornment, Hat, Helmet, Shield, Katana, Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth>
+      <HPMultiplier>190</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>120</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>125</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>42</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>16</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Doom, Disable, Immobilize, Sleep, Charm, Stop, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Vampire, Confuse, Traitor, Stone, Undead, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>30</Id> <!-- Holy Knight / ホーリーナイト / Chevalier sacré / Heiliger Ritter -->
+      <JobCommandId>40</JobCommandId>
+		  <InnateAbilityId1>475</InnateAbilityId1> <!-- Innate: Maintenance -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, KnightSword, Sword, Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth> <!-- HPGrowth from 10 to 9 -->
+      <HPMultiplier>140</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth> <!-- SpeedGrowth from 100 to 95 -->
+      <SpeedMultiplier>105</SpeedMultiplier> <!-- SpeedMultiplier from 100 to 105 -->
+      <PAGrowth>40</PAGrowth> <!-- PAGrowth from 50 to 40 -->
+      <PAMultiplier>122</PAMultiplier> <!-- PAMultiplier from 100 to 122 -->
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>25</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>31</Id> <!-- Templar / テンプルナイト / Templier / Tempelritter --> <!-- Beowulf Templar Job. Now an Onion Knight Hybrid. -->
+      <JobCommandId>69</JobCommandId>
+		  <InnateAbilityId1>469</InnateAbilityId1> <!-- Concentrate -->
+      <InnateAbilityId2>475</InnateAbilityId2> <!-- Maintenance -->
+      <InnateAbilityId3>476</InnateAbilityId3> <!-- Two Hands -->
+      <InnateAbilityId4>477</InnateAbilityId4> <!-- Dual Wield --> <!-- Access to All Equipment -->
+      <EquippableItems>Knife, NinjaBlade, Sword, KnightSword, Katana, FellSword, Axe, Flail, Polearm, Pole, Gun, Crossbow, Bow, Rod, Staff, Book, Instrument, Unarmed, Shield, Helmet, Hat, HairAdornment, Armor, Clothing, Robe, Cloth, Ring, Armlet, Armguard, Cloak, Perfume, Shoes, Bag, LipRouge</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>122</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>145</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>48</PAGrowth>
+      <PAMultiplier>125</PAMultiplier>
+      <MAGrowth>45</MAGrowth>
+      <MAMultiplier>105</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump> <!-- Jump +1 -->
+      <CharacterEvasion>14</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>32</Id> <!-- White Knight / ホワイトナイト / Chevalier blanc / Weißritter --> <!-- Wiegraf's Job -->
+      <JobCommandId>34</JobCommandId>
+		  <InnateAbilityId1>494</InnateAbilityId1> <!-- Innate : Manafont -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, KnightSword, Sword, Unarmed</EquippableItems>
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>150</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>150</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Doom, Sleep, Charm, Toad, Chicken, Berserk, Invisible, Reraise, Vampire, Confuse, Traitor, Stone, Undead, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>38</Id> <!-- Nightblade / ナイトブレード / Lame occulte / Nachtklinge --> <!-- Izlude/Isilude Job -->
+      <JobCommandId>51</JobCommandId>
+      <InnateAbilityId1>469</InnateAbilityId1>
+      <InnateAbilityId2>493</InnateAbilityId2> <!-- Lifefont/Move-HP UP -->
+      <InnateAbilityId3>446</InnateAbilityId3> <!-- Soulbind/DMG Split -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, Polearm, KnightSword, Sword, NinjaBlade, Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth> <!-- HPGrowth rescaled from 10 to 7 -->
+      <HPMultiplier>160</HPMultiplier> <!-- HPMultiplier from 155 to 160 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>50</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>48</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>50</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Doom, Disable, Immobilize, Sleep, Charm, Stop, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Vampire, Confuse, Traitor, Stone, Undead, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>39</Id> <!-- Sorcerer / ソーサラー / Ensorceleur / Zauberer --> <!-- Kletian -->
+      <JobCommandId>72</JobCommandId>
+      <InnateAbilityId1>0</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Pole, Staff, Rod, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>125</HPMultiplier>
+      <MPGrowth>8</MPGrowth>
+      <MPMultiplier>140</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>55</PAGrowth>
+      <PAMultiplier>80</PAMultiplier>
+      <MAGrowth>49</MAGrowth>
+      <MAMultiplier>125</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion> <!-- Increased CharacterEvasion from 14 to 20 -->
+      <InnateStatus>None</InnateStatus> <!-- Added Immunity to Silence -->
+      <ImmuneStatus>Silence, Doom, Disable, Sleep, Charm, Stop, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Vampire, Confuse, Traitor, Stone, Undead, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>40</Id> <!-- White Knight / ホワイトナイト / Chevalier blanc / Weißritter --> <!-- Wiegraf -->
+      <JobCommandId>48</JobCommandId>
+      <InnateAbilityId1>494</InnateAbilityId1> <!-- Innate: Manafont -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, KnightSword, Sword, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>200</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>150</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>140</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>125</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>15</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Doom, Disable, Immobilize, Sleep, Charm, Stop, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Vampire, Confuse, Traitor, Stone, Undead, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>41</Id> <!-- Skyseer / 天道士 / Mage céleste / Astronomin --> <!-- Rafa -->
+      <JobCommandId>50</JobCommandId>
+		  <InnateAbilityId1>468</InnateAbilityId1> <!-- Magic DEF Boost -->
+      <InnateAbilityId2>509</InnateAbilityId2> <!-- Treasure Hunter -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Flail, Hat, Pole, Staff, Unarmed</EquippableItems> <!-- Added Flail -->
+      <HPGrowth>8</HPGrowth> <!-- HPGrowth rescaled from 11 to 8 -->
+      <HPMultiplier>110</HPMultiplier> <!-- HPMultiplier from 90 to 110 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth> <!-- SpeedGrowth from 100 to 85 -->
+      <SpeedMultiplier>115</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier> <!-- Rescaled from 80 to 100 -->
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>45</Id> <!-- Assassin / アサシン / Assassin / Assassine -->
+      <JobCommandId>54</JobCommandId>
+      <InnateAbilityId1>477</InnateAbilityId1>
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Innate Beastmaster -->
+      <InnateAbilityId3>482</InnateAbilityId3> <!-- Innate Swiftspell -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, Katana, Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth>
+      <HPMultiplier>160</HPMultiplier>
+      <MPGrowth>8</MPGrowth>
+      <MPMultiplier>125</MPMultiplier>
+      <SpeedGrowth>105</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>45</MAGrowth>
+      <MAMultiplier>125</MAMultiplier>
+      <Move>4</Move>
+      <Jump>8</Jump>
+      <CharacterEvasion>30</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Toad, Chicken, Invisible, Traitor, Stone, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>46</Id> <!-- Assassin / アサシン / Assassin / Assassine -->
+      <JobCommandId>55</JobCommandId>
+      <InnateAbilityId1>477</InnateAbilityId1>
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Innate Beastmaster -->
+      <InnateAbilityId3>482</InnateAbilityId3> <!-- Innate Swiftspell -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, NinjaBlade, Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth>
+      <HPMultiplier>155</HPMultiplier>
+      <MPGrowth>8</MPGrowth>
+      <MPMultiplier>125</MPMultiplier>
+      <SpeedGrowth>110</SpeedGrowth>
+      <SpeedMultiplier>115</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>45</MAGrowth>
+      <MAMultiplier>125</MAMultiplier>
+      <Move>4</Move>
+      <Jump>8</Jump>
+      <CharacterEvasion>28</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Toad, Chicken, Invisible, Traitor, Stone, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>47</Id> <!-- Divine Knight / ディバインナイト / Chevalier divin / Gottesritter --> <!-- Meliadoul, Enemy Encounter -->
+      <JobCommandId>66</JobCommandId>
+      <InnateAbilityId1>486</InnateAbilityId1> <!-- Move +1 -->
+      <InnateAbilityId2>494</InnateAbilityId2> <!-- Manafont -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, Armor, HairAdornment, Helmet, Shield, Crossbow, KnightSword, Sword, Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth> <!-- HPGrowth from 10 to 8 -->
+      <HPMultiplier>150</HPMultiplier> <!-- HPMultiplier from 125 to 150 -->
+      <MPGrowth>15</MPGrowth>
+      <MPMultiplier>80</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>90</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>12</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor, Stone, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>48</Id> <!-- Cleric / クレリック / Clerc / Diakonisse --> <!-- Alma, Final Boss fight? -->
+      <JobCommandId>49</JobCommandId>
+      <InnateAbilityId1>466</InnateAbilityId1> <!-- Innate: DEF Boost -->
+      <InnateAbilityId2>468</InnateAbilityId2> <!-- Innate: Magick DEF Boost -->
+      <InnateAbilityId3>467</InnateAbilityId3> <!-- Magic ATK Boost -->
+      <InnateAbilityId4>444</InnateAbilityId4> <!-- Cup of Life -->
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Staff, Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth> <!-- HPGrowth from 11 to 8 -->
+      <HPMultiplier>110</HPMultiplier> <!-- HPMultiplier from 90 to 110 -->
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>160</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>18</CharacterEvasion>
+      <InnateStatus>Regen</InnateStatus> <!-- Innate: Regen -->
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Lightning, Dark</AbsorbElements> <!-- Absorbs Lightning and Dark -->
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>50</Id> <!-- Soldier / ソルジャー / SOLDAT / SOLDAT -->
+      <JobCommandId>41</JobCommandId>
+      <InnateAbilityId1>475</InnateAbilityId1> <!-- Innate: Safeguard -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, Armor, HairAdornment, Hat, Sword, Unarmed</EquippableItems> <!-- Added Armor -->
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>125</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth> <!-- SpeedGrowth from 100 to 95 -->
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>110</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>52</Id> <!-- Holy Knight / ホーリーナイト / Chevalier sacré / Heiliger Ritter --> <!-- Agrias, Guest Chapter 2 -->
+      <JobCommandId>33</JobCommandId>
+      <InnateAbilityId1>475</InnateAbilityId1> <!-- Innate: Maintenance -->
+      <InnateAbilityId2>465</InnateAbilityId2> <!-- Innate: ATK UP -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, KnightSword, Sword, Unarmed</EquippableItems>
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>150</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth> <!-- SpeedGrowth from 100 to 95 -->
+      <SpeedMultiplier>105</SpeedMultiplier> <!-- SpeedMultiplier from 100 to 105 -->
+      <PAGrowth>40</PAGrowth> <!-- PAGrowth from 50 to 40 -->
+      <PAMultiplier>122</PAMultiplier> <!-- PAMultiplier from 100 to 122 -->
+      <MAGrowth>46</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>25</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>60</Id> <!-- Gigas / 魔人 / Titan / Dämon --> <!-- Belias, the Fiend/Velius, the Warlock -->
+      <JobCommandId>103</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>472</InnateAbilityId2>
+      <InnateAbilityId3>482</InnateAbilityId3>
+      <InnateAbilityId4>442</InnateAbilityId4> <!-- Counter -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth> <!-- HPGrowth rescaled from 12 to 8 to 6 -->
+      <HPMultiplier>109</HPMultiplier> <!-- HPMultiplier rescaled from 90 to 95 to 100 to 110 to 109 -->
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>86</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth>
+      <SpeedMultiplier>140</SpeedMultiplier> <!-- SpeedMultiplier rescaled from 132 to 140 -->
+      <PAGrowth>38</PAGrowth>
+      <PAMultiplier>142</PAMultiplier>
+      <MAGrowth>46</MAGrowth>
+      <MAMultiplier>140</MAMultiplier>
+      <Move>5</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>30</CharacterEvasion> <!-- CharacterEvasion rescaled from 18 to 24 to 30 -->
+      <InnateStatus>None</InnateStatus> <!-- Blind, Slow, Silence, Immobilize Immunity -->
+      <ImmuneStatus>Blind, Slow, Silence, Immobilize, Doom, Disable, Sleep, Charm, Atheist, Faith, Stop, Regen, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Float, Oil, Chest, Vampire, Confuse, Traitor, Stone, Undead, KO, Crystal</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Dark</HalveElements> <!-- Half Dark Element -->
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>62</Id> <!-- Death Seraph / 死の天使 / Ange de la mort / Todesengel --> <!-- Zalera, the Death Seraph (Marquis Elmdor Lucavi Demon) -->
+      <JobCommandId>107</JobCommandId>
+      <InnateAbilityId1>430</InnateAbilityId1> <!-- Changed Cannot Enter Water to Faith Surge -->
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>482</InnateAbilityId3>
+      <InnateAbilityId4>426</InnateAbilityId4> <!-- Changed Beastmaster to Vigilance -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth> <!-- HPGrowth rescaled from 12 to 8 -->
+      <HPMultiplier>95</HPMultiplier> <!-- HPMultiplier rescaled from 85 to to 95 -->
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>133</SpeedMultiplier>
+      <PAGrowth>38</PAGrowth>
+      <PAMultiplier>145</PAMultiplier>
+      <MAGrowth>46</MAGrowth>
+      <MAMultiplier>140</MAMultiplier>
+      <Move>5</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>28</CharacterEvasion> <!-- Evasion from 24 to 28 -->
+      <InnateStatus>Float</InnateStatus> <!-- Added Blind, Slow Immunity -->
+      <ImmuneStatus>Blind, Slow, Doom, Disable, Immobilize, Sleep, Charm, Atheist, Faith, Stop, Regen, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Oil, Chest, Vampire, Silence, Confuse, Traitor, Stone, Undead, KO, Crystal</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>Earth</NullifyElements>
+      <HalveElements>Dark</HalveElements> <!-- Half Dark Element -->
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>63</Id> <!-- Archer / 弓使い / Archer / Schütze -->
+      <JobCommandId>8</JobCommandId> <!-- Undead Archer 156 to 8 -->
+      <InnateAbilityId1>478</InnateAbilityId1>
+      <InnateAbilityId2>489</InnateAbilityId2>
+      <InnateAbilityId3>465</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Shield, Bow, Crossbow, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>110</HPMultiplier>
+      <MPGrowth>16</MPGrowth>
+      <MPMultiplier>65</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>45</PAGrowth>
+      <PAMultiplier>115</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>80</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>Float, Undead</InnateStatus>
+      <ImmuneStatus>Doom, Charm, Regen, Poison, Invisible, Reraise, Vampire, Blind, Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>64</Id> <!-- Bringer of Order / 統制者 / Grand Ordonnateur / Einiger --> <!-- Hashmalum/Hashmal aka Vormav's Lucavi Demon -->
+      <JobCommandId>111</JobCommandId>
+      <InnateAbilityId1>442</InnateAbilityId1> <!-- Cannot Enter Water changed to Counter -->
+      <InnateAbilityId2>467</InnateAbilityId2> <!-- Brawler changed to Magick Boost -->
+      <InnateAbilityId3>482</InnateAbilityId3> <!-- Innate: Swiftspell -->
+      <InnateAbilityId4>423</InnateAbilityId4>  <!-- Magick Surge -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>3</HPGrowth> <!-- HPGrowth from 12 to 3 -->
+      <HPMultiplier>200</HPMultiplier> <!-- HPMultiplier from 83 to 200 -->
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>87</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>148</SpeedMultiplier>
+      <PAGrowth>38</PAGrowth>
+      <PAMultiplier>141</PAMultiplier>
+      <MAGrowth>46</MAGrowth>
+      <MAMultiplier>126</MAMultiplier>
+      <Move>5</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>40</CharacterEvasion> <!-- Evasion from 12 to 40 -->
+      <InnateStatus>Shell</InnateStatus> <!-- Added Innate: Shell (Hashmalum hurts himself most of the time when spellcasting) --> <!-- Added Immunity to Slow, Immobilize, Blind -->
+      <ImmuneStatus>Slow, Immobilize, Blind, Doom, Disable, Sleep, Charm, Atheist, Faith, Stop, Regen, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Float, Oil, Chest, Vampire, Silence, Confuse, Traitor, Stone, Undead, KO, Crystal</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Dark, Holy</HalveElements> <!-- Half Dark Element, Half Holy Element -->
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>65</Id> <!-- High Seraph / 聖天使 / Grand Séraphin / Cherub --> <!-- St. Altima, Angelic Form: Phase 1 -->
+      <JobCommandId>89</JobCommandId>
+      <InnateAbilityId1>453</InnateAbilityId1> <!-- Added Hamedo/First Strike -->
+      <InnateAbilityId2>477</InnateAbilityId2> <!-- Brawler replaced with Dual Wield -->
+      <InnateAbilityId3>482</InnateAbilityId3>
+      <InnateAbilityId4>499</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth> <!-- HPGrowth from 12 to 6 -->
+      <HPMultiplier>123</HPMultiplier> <!-- HPMultiplier from 70 to 123 -->
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>90</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth> <!-- SpeedGrowth from 100 to 95 -->
+      <SpeedMultiplier>118</SpeedMultiplier>
+      <PAGrowth>37</PAGrowth> <!-- PAGrowth from 40 to 37 -->
+      <PAMultiplier>113</PAMultiplier>
+      <MAGrowth>40</MAGrowth> <!-- MAGrowth from 46 to 40 -->
+      <MAMultiplier>125</MAMultiplier> <!-- MAMultiplier from 120 to 125 -->
+      <Move>5</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>45</CharacterEvasion> <!-- Evasion from 11 to 45 -->
+      <InnateStatus>Float</InnateStatus> <!-- Added Immunities: Slow, Disable, Blind -->
+      <ImmuneStatus>Slow, Blind, Disable, Doom, Immobilize, Sleep, Charm, Atheist, Faith, Stop, Regen, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Oil, Chest, Vampire, Silence, Confuse, Traitor, Stone, Undead, KO, Crystal</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Holy</AbsorbElements> <!-- Absorbs Holy Element -->
+      <NullifyElements>Earth</NullifyElements>
+      <HalveElements>Dark</HalveElements> <!-- Half Damage Dark -->
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>66</Id> <!-- Black Mage / 黒魔道士 / Mage noir / Schwarzmagier -->
+      <JobCommandId>157</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1>
+      <InnateAbilityId2>462</InnateAbilityId2> <!-- Half MP -->
+      <InnateAbilityId3>498</InnateAbilityId3> <!-- Teleport -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Rod, Unarmed</EquippableItems>
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>100</HPMultiplier>
+      <MPGrowth>9</MPGrowth>
+      <MPMultiplier>120</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>60</PAGrowth>
+      <PAMultiplier>60</PAMultiplier>
+      <MAGrowth>48</MAGrowth>
+      <MAMultiplier>150</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>5</CharacterEvasion>
+      <InnateStatus>Float, Undead</InnateStatus>
+      <ImmuneStatus>Doom, Charm, Regen, Poison, Invisible, Reraise, Vampire, Blind, Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>67</Id> <!-- The Impure / 不浄王 / Impur / Sünder --> <!-- Queklain Note: HP Amplified. Speed Buffed. Added Evasion. Added Innate Abilities. Added Immunities. Added Dark Resistance. -->
+      <JobCommandId>115</JobCommandId>
+      <InnateAbilityId1>466</InnateAbilityId1> <!-- DEF Boost -->
+      <InnateAbilityId2>430</InnateAbilityId2> <!-- Faith Surge -->
+      <InnateAbilityId3>482</InnateAbilityId3> <!-- Swiftspell (Default) -->
+      <InnateAbilityId4>442</InnateAbilityId4> <!-- Counter -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>4</HPGrowth> <!-- 12 to 4 -->
+      <HPMultiplier>110</HPMultiplier> <!-- 65 Default. Changed to 70 to 80 to 110 -->
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>90</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth> <!-- 100 to 82 to 85 SpeedGrowth -->
+      <SpeedMultiplier>164</SpeedMultiplier> <!-- 138 to 168 to 164 SpeedGrowth -->
+      <PAGrowth>42</PAGrowth>
+      <PAMultiplier>144</PAMultiplier>
+      <MAGrowth>46</MAGrowth>
+      <MAMultiplier>150</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>40</CharacterEvasion> <!-- 12 to 40 Evasion -->
+      <InnateStatus>None</InnateStatus> <!-- Added Slow, Blind, Immobilize Immunity -->
+      <ImmuneStatus>Slow, Blind, Immobilize, Doom, Disable, Sleep, Charm, Atheist, Faith, Stop, Regen, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Float, Oil, Chest, Vampire, Silence, Confuse, Traitor, Stone, Undead, KO, Crystal</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Dark</HalveElements> <!-- Added Dark Resistance -->
+      <WeakElements>Holy</WeakElements> <!-- Added Holy Weakness -->
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>68</Id> <!-- Time Mage / 時魔道士 / Chronomancien / Zeitmagier -->
+      <JobCommandId>158</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1>
+      <InnateAbilityId2>482</InnateAbilityId2> <!-- Swiftspell -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Staff, Unarmed</EquippableItems>
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>100</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>120</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>65</PAGrowth>
+      <PAMultiplier>50</PAMultiplier>
+      <MAGrowth>48</MAGrowth>
+      <MAMultiplier>135</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>5</CharacterEvasion>
+      <InnateStatus>Float, Undead</InnateStatus>
+      <ImmuneStatus>Doom, Charm, Regen, Poison, Invisible, Reraise, Vampire, Blind, Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>69</Id> <!-- The Wroth / 憤怒の霊帝 / Grand Courroux / Häscher --> <!-- bitchass dycedarg's lucavi demon -->
+      <JobCommandId>119</JobCommandId>
+      <InnateAbilityId1>442</InnateAbilityId1> <!-- Cannot Enter Water (there's no water in this battle?) changed to Counter -->
+      <InnateAbilityId2>426</InnateAbilityId2> <!-- Added Vigilance -->
+      <InnateAbilityId3>482</InnateAbilityId3> <!-- Innate: Swiftspell -->
+      <InnateAbilityId4>472</InnateAbilityId4> <!-- Added Brawler -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth> <!-- HPGrowth from 12 to 8 -->
+      <HPMultiplier>120</HPMultiplier> <!-- HPMultiplier from 90 to 120 -->
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>95</MPMultiplier>
+      <SpeedGrowth>93</SpeedGrowth> <!-- SpeedGrowth from 100 to 93 -->
+      <SpeedMultiplier>150</SpeedMultiplier>
+      <PAGrowth>43</PAGrowth>
+      <PAMultiplier>139</PAMultiplier>
+      <MAGrowth>47</MAGrowth>
+      <MAMultiplier>110</MAMultiplier>
+      <Move>5</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>35</CharacterEvasion> <!-- Evasion from 19 to 35 -->
+      <InnateStatus>None</InnateStatus> <!-- Added Immunity to Slow, Blind, Immobilize, Silence -->
+      <ImmuneStatus>Slow, Blind, Immobilize, Silence, Doom, Disable, Sleep, Charm, Atheist, Faith, Stop, Regen, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Float, Oil, Chest, Vampire, Confuse, Traitor, Stone, Undead, KO, Crystal</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Dark</HalveElements> <!-- Half Dark Element -->
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>70</Id> <!-- Mystic / 陰陽士 / Maître yin-yang / Mystiker -->
+      <JobCommandId>16</JobCommandId> <!-- Undead Oracle 159 to 16 -->
+      <InnateAbilityId1>478</InnateAbilityId1>
+      <InnateAbilityId2>466</InnateAbilityId2>
+      <InnateAbilityId3>473</InnateAbilityId3>
+      <InnateAbilityId4>502</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Pole, Book, Staff, Rod, Unarmed</EquippableItems>
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>90</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>110</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>60</PAGrowth>
+      <PAMultiplier>50</PAMultiplier>
+      <MAGrowth>45</MAGrowth>
+      <MAMultiplier>120</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>5</CharacterEvasion>
+      <InnateStatus>Float, Undead</InnateStatus>
+      <ImmuneStatus>Doom, Charm, Regen, Poison, Invisible, Reraise, Vampire, Blind, Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>71</Id> <!-- Summoner / 召喚士 / Invocateur / Beschwörer -->
+      <JobCommandId>13</JobCommandId> <!-- Undead Summoner 160 to 13 -->
+      <InnateAbilityId1>478</InnateAbilityId1>
+      <InnateAbilityId2>494</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Staff, Rod, Unarmed</EquippableItems>
+      <HPGrowth>12</HPGrowth>
+      <HPMultiplier>85</HPMultiplier>
+      <MPGrowth>8</MPGrowth>
+      <MPMultiplier>125</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>70</PAGrowth>
+      <PAMultiplier>50</PAMultiplier>
+      <MAGrowth>40</MAGrowth>
+      <MAMultiplier>125</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>5</CharacterEvasion>
+      <InnateStatus>Float, Undead</InnateStatus>
+      <ImmuneStatus>Doom, Charm, Regen, Poison, Invisible, Reraise, Vampire, Blind, Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>72</Id> <!-- Holy Dragon / ホーリードラゴン / Dragon sacré / Heiliger Drache --> <!-- Save Reis -->
+      <JobCommandId>44</JobCommandId>
+      <InnateAbilityId1>465</InnateAbilityId1> <!-- ATK Boost -->
+      <InnateAbilityId2>442</InnateAbilityId2> <!-- Counter -->
+      <InnateAbilityId3>468</InnateAbilityId3> <!-- Magic DEF UP -->
+      <InnateAbilityId4>466</InnateAbilityId4> <!-- DEF UP -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>4</HPGrowth> <!-- HPGrowth from 6 to 4 -->
+      <HPMultiplier>150</HPMultiplier> <!-- HPGrowth from 130 to 150 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>115</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>132</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>147</PAMultiplier>
+      <MAGrowth>6</MAGrowth>
+      <MAMultiplier>110</MAMultiplier>
+      <Move>5</Move>
+      <Jump>131</Jump>
+      <CharacterEvasion>30</CharacterEvasion> <!-- 5 to 30 Evasion -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire, Traitor</ImmuneStatus>
+      <StartingStatus>Regen, Haste</StartingStatus> <!-- Added StartingStatus, Regen, Haste -->
+      <AbsorbElements>Holy</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>148</MonsterPortrait>
+      <MonsterPalette>3</MonsterPalette>
+      <MonsterGraphic>15</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>73</Id> <!-- Arch Seraph / 聖大天使 / Archange / Erzengel --> <!-- St. Altima, Phase 2: Demon/Undead Form -->
+      <JobCommandId>125</JobCommandId>
+      <InnateAbilityId1>0</InnateAbilityId1>
+      <InnateAbilityId2>430</InnateAbilityId2> <!-- Default: Faith Surge -->
+      <InnateAbilityId3>482</InnateAbilityId3> <!-- Default: Swiftspell -->
+      <InnateAbilityId4>499</InnateAbilityId4> <!-- Default: Teleport 2-->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth> <!-- HPGrowth from 10 to 7 -->
+      <HPMultiplier>143</HPMultiplier> <!-- HPMultiplier from 125 to 143 -->
+      <MPGrowth>15</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>97</SpeedGrowth> <!-- SpeedGrowth from 100 to 97 -->
+      <SpeedMultiplier>150</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth> <!-- PAGrowth from 36 to 40 -->
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>40</MAGrowth> <!-- MAGrowth from 48 to 40 -->
+      <MAMultiplier>130</MAMultiplier>
+      <Move>8</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>30</CharacterEvasion> <!-- Evasion from 10 to 30 -->
+      <InnateStatus>Float</InnateStatus> <!-- Added Immunity: Slow, Immobilize -->
+      <ImmuneStatus>Slow, Immobilize, Doom, Disable, Sleep, Charm, Atheist, Faith, Stop, Regen, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Oil, Chest, Vampire, Silence, Confuse, Blind, Traitor, Stone, Undead, KO, Crystal</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Dark</AbsorbElements> <!-- Absorbs Dark Element -->
+      <NullifyElements>Earth</NullifyElements>
+      <HalveElements>Fire</HalveElements> <!-- Half Fire Element -->
+      <WeakElements>Holy</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>74</Id> <!-- Squire / 見習い戦士 / Écuyer / Knappe -->
+      <JobCommandId>5</JobCommandId>
+      <InnateAbilityId1>480</InnateAbilityId1> <!-- Re-Equip -->
+      <InnateAbilityId2>486</InnateAbilityId2> <!-- Move +1 -->
+      <InnateAbilityId3>463</InnateAbilityId3> <!-- JP Boost -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, Flail, Axe, Sword, Knife, Shield, Unarmed</EquippableItems> <!-- Added Shield -->
+      <HPGrowth>10</HPGrowth> <!-- 11 to 10 -->
+      <HPMultiplier>102</HPMultiplier> <!-- 100 to 102 -->
+      <MPGrowth>15</MPGrowth>
+      <MPMultiplier>75</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>80</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>75</Id> <!-- Chemist / アイテム士 / Apothicaire / Chemikus -->
+      <JobCommandId>6</JobCommandId>
+      <InnateAbilityId1>474</InnateAbilityId1> <!-- Throw Item (Default) -->
+      <InnateAbilityId2>475</InnateAbilityId2> <!-- Safeguard/Maintenance -->
+      <InnateAbilityId3>0</InnateAbilityId3> <!-- Treasure Hunter Removed -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, Gun, Knife, Unarmed</EquippableItems>
+      <HPGrowth>12</HPGrowth>
+      <HPMultiplier>90</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>75</PAGrowth>
+      <PAMultiplier>75</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>85</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>76</Id> <!-- Knight / ナイト / Chevalier / Ritter -->
+      <JobCommandId>7</JobCommandId>
+      <InnateAbilityId1>479</InnateAbilityId1> <!-- Evasive Stance -->
+      <InnateAbilityId2>471</InnateAbilityId2> <!-- Poach -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, KnightSword, Sword, Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth>
+      <HPMultiplier>130</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>110</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth> <!-- 38 to 40 -->
+      <PAMultiplier>120</PAMultiplier> <!-- 122 to 120 -->
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>80</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>77</Id> <!-- Archer / 弓使い / Archer / Schütze -->
+      <JobCommandId>8</JobCommandId>
+      <InnateAbilityId1>489</InnateAbilityId1> <!-- Jump +1 -->
+      <InnateAbilityId2>465</InnateAbilityId2> <!-- ATK Boost -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, Shield, Bow, Crossbow, Gun, Unarmed</EquippableItems> <!-- Added Gun -->
+      <HPGrowth>11</HPGrowth>
+      <HPMultiplier>100</HPMultiplier>
+      <MPGrowth>16</MPGrowth>
+      <MPMultiplier>65</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>45</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>80</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>12</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>78</Id> <!-- Monk / モンク / Moine / Mönch -->
+      <JobCommandId>9</JobCommandId>
+      <InnateAbilityId1>472</InnateAbilityId1> <!-- Brawler -->
+      <InnateAbilityId2>487</InnateAbilityId2> <!-- Move +2 -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, Unarmed</EquippableItems> <!-- Added Hat -->
+      <HPGrowth>9</HPGrowth>
+      <HPMultiplier>140</HPMultiplier> <!-- 135 to 140 -->
+      <MPGrowth>13</MPGrowth>
+      <MPMultiplier>80</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>48</PAGrowth>
+      <PAMultiplier>129</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>80</MAMultiplier>
+      <Move>3</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>20</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>79</Id> <!-- White Mage / 白魔道士 / Mage blanc / Weißmagier -->
+      <JobCommandId>10</JobCommandId>
+      <InnateAbilityId1>468</InnateAbilityId1> <!-- Magic DEF UP -->
+      <InnateAbilityId2>462</InnateAbilityId2> <!-- Lifefont/Move-HP UP to Halve MP -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Staff, Flail, Unarmed</EquippableItems> <!-- Added Flail -->
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>95</HPMultiplier> <!-- 85 to 95 -->
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>120</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>40</MAGrowth>
+      <MAMultiplier>125</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>80</Id> <!-- Black Mage / 黒魔道士 / Mage noir / Schwarzmagier -->
+      <JobCommandId>11</JobCommandId>
+      <InnateAbilityId1>462</InnateAbilityId1> <!-- Halve MP -->
+      <InnateAbilityId2>498</InnateAbilityId2> <!-- Teleport -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Rod, Staff, Book, Unarmed</EquippableItems> <!-- Added Staff and Book -->
+      <HPGrowth>12</HPGrowth>
+      <HPMultiplier>80</HPMultiplier> <!-- 75 to 80 -->
+      <MPGrowth>7</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>60</PAGrowth>
+      <PAMultiplier>60</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>150</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>81</Id> <!-- Time Mage / 時魔道士 / Chronomancien / Zeitmagier -->
+      <JobCommandId>12</JobCommandId>
+      <InnateAbilityId1>482</InnateAbilityId1> <!-- Swiftspell -->
+      <InnateAbilityId2>462</InnateAbilityId2> <!-- Halve MP -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Staff, Rod, Unarmed</EquippableItems> <!-- Added Rod -->
+      <HPGrowth>10</HPGrowth> <!-- HPGrowth from 12 to 10 -->
+      <HPMultiplier>85</HPMultiplier> <!-- 75 to 85 -->
+      <MPGrowth>8</MPGrowth>
+      <MPMultiplier>110</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>65</PAGrowth>
+      <PAMultiplier>50</PAMultiplier>
+      <MAGrowth>45</MAGrowth>
+      <MAMultiplier>120</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>82</Id> <!-- Summoner / 召喚士 / Invocateur / Beschwörer -->
+      <JobCommandId>13</JobCommandId>
+      <InnateAbilityId1>462</InnateAbilityId1> <!-- Manafont/Move-MP UP to Halve MP -->
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Beastmaster -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Staff, Rod, Pole, Unarmed</EquippableItems> <!-- Added Pole -->
+      <HPGrowth>10</HPGrowth> <!-- HPGrowth from 13 to 10 -->
+      <HPMultiplier>75</HPMultiplier> <!-- HPMultiplier from 70 to 75 -->
+      <MPGrowth>8</MPGrowth>
+      <MPMultiplier>125</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>95</SpeedMultiplier>
+      <PAGrowth>70</PAGrowth>
+      <PAMultiplier>50</PAMultiplier>
+      <MAGrowth>40</MAGrowth>
+      <MAMultiplier>120</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>83</Id> <!-- Thief / シーフ / Voleur / Dieb -->
+      <JobCommandId>14</JobCommandId>
+      <InnateAbilityId1>490</InnateAbilityId1> <!-- Jump +2 -->
+      <InnateAbilityId2>469</InnateAbilityId2> <!-- Concentrate -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, Knife, NinjaBlade, Unarmed</EquippableItems> <!-- Added NinjaBlade-->
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>90</HPMultiplier>
+      <MPGrowth>16</MPGrowth>
+      <MPMultiplier>50</MPMultiplier>
+      <SpeedGrowth>80</SpeedGrowth>
+      <SpeedMultiplier>120</SpeedMultiplier>
+      <PAGrowth>45</PAGrowth>
+      <PAMultiplier>110</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>60</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>25</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>84</Id> <!-- Orator / 話術士 / Médiateur / Orator -->
+      <JobCommandId>15</JobCommandId>
+      <InnateAbilityId1>473</InnateAbilityId1> <!-- Beast Tongue -->
+      <InnateAbilityId2>470</InnateAbilityId2> <!-- Tame -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Gun, Knife, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth> <!-- HPGrowth from 11 to 10 -->
+      <HPMultiplier>100</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>45</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>45</MAGrowth>
+      <MAMultiplier>115</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>85</Id> <!-- Mystic / 陰陽士 / Maître yin-yang / Mystiker -->
+      <JobCommandId>16</JobCommandId>
+      <InnateAbilityId1>466</InnateAbilityId1> <!-- DEF Boost -->
+      <InnateAbilityId2>473</InnateAbilityId2> <!-- Beast Tongue -->
+      <InnateAbilityId3>502</InnateAbilityId3> <!-- Waterwalking -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Pole, Book, Staff, Rod, Shield, Unarmed</EquippableItems> <!-- Added Shield -->
+      <HPGrowth>9</HPGrowth> <!-- 8 to 9 -->
+      <HPMultiplier>110</HPMultiplier>
+      <MPGrowth>9</MPGrowth>
+      <MPMultiplier>110</MPMultiplier>
+      <SpeedGrowth>95</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>40</MAGrowth>
+      <MAMultiplier>130</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>15</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>86</Id> <!-- Geomancer / 風水士 / Géomancien / Geomant -->
+      <JobCommandId>17</JobCommandId>
+      <InnateAbilityId1>476</InnateAbilityId1> <!-- Doublehand -->
+      <InnateAbilityId2>501</InnateAbilityId2> <!-- Ignore Terrain -->
+      <InnateAbilityId3>478</InnateAbilityId3> <!-- Beastmaster -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Helmet, Hat, Shield, Axe, Sword, KnightSword, Unarmed</EquippableItems> <!-- Added Helmet, KnightSword-->
+      <HPGrowth>9</HPGrowth> <!-- 10 to 9 -->
+      <HPMultiplier>110</HPMultiplier>
+      <MPGrowth>11</MPGrowth>
+      <MPMultiplier>95</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>45</PAGrowth>
+      <PAMultiplier>110</PAMultiplier>
+      <MAGrowth>45</MAGrowth>
+      <MAMultiplier>110</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>12</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>87</Id> <!-- Dragoon / 竜騎士 / Chevalier dragon / Dragoon -->
+      <JobCommandId>18</JobCommandId>
+      <InnateAbilityId1>491</InnateAbilityId1> <!-- Jump +3 -->
+      <InnateAbilityId2>476</InnateAbilityId2> <!-- Doublehand -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Shield, Polearm, Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth> <!-- 10 to 9 -->
+      <HPMultiplier>120</HPMultiplier>
+      <MPGrowth>15</MPGrowth>
+      <MPMultiplier>50</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>70</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>18</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>88</Id> <!-- Samurai / 侍 / Samouraï / Samurai -->
+      <JobCommandId>19</JobCommandId>
+      <InnateAbilityId1>479</InnateAbilityId1> <!-- Evasive Stance -->
+      <InnateAbilityId2>467</InnateAbilityId2> <!-- Mage ATK UP -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Armor, HairAdornment, Helmet, Katana, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>110</HPMultiplier> <!-- 85 to 110 -->
+      <MPGrowth>14</MPGrowth>
+      <MPMultiplier>90</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>45</PAGrowth>
+      <PAMultiplier>128</PAMultiplier>
+      <MAGrowth>45</MAGrowth>
+      <MAMultiplier>128</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>89</Id> <!-- Ninja / 忍者 / Ninja / Ninja -->
+      <JobCommandId>20</JobCommandId>
+      <InnateAbilityId1>477</InnateAbilityId1> <!-- Dual Wield -->
+      <InnateAbilityId2>474</InnateAbilityId2> <!-- Throw Items -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, Flail, NinjaBlade, Knife, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>85</HPMultiplier> <!-- 80 to 85 -->
+      <MPGrowth>13</MPGrowth>
+      <MPMultiplier>50</MPMultiplier>
+      <SpeedGrowth>82</SpeedGrowth>
+      <SpeedMultiplier>120</SpeedMultiplier>
+      <PAGrowth>43</PAGrowth>
+      <PAMultiplier>122</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>75</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>30</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>90</Id> <!-- Arithmetician / 算術士 / Arithméticien / Arithmetiker -->
+      <JobCommandId>21</JobCommandId>
+      <InnateAbilityId1>506</InnateAbilityId1> <!-- Levitate -->
+      <InnateAbilityId2>507</InnateAbilityId2> <!-- Fly -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Robe, Clothing, HairAdornment, Hat, Pole, Book, Staff, Rod, Unarmed</EquippableItems> <!-- Added Staff, Rod -->
+      <HPGrowth>12</HPGrowth> <!-- 14 to 12 -->
+      <HPMultiplier>85</HPMultiplier> <!-- 65 to 85 -->
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>80</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>50</SpeedMultiplier>
+      <PAGrowth>70</PAGrowth>
+      <PAMultiplier>50</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>70</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>12</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>91</Id> <!-- Bard / 吟遊詩人 / Barde / Barde -->
+      <JobCommandId>22</JobCommandId>
+      <InnateAbilityId1>486</InnateAbilityId1> <!-- Movement +1 -->
+      <InnateAbilityId2>466</InnateAbilityId2> <!-- DEF UP -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, Bag, Instrument, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>100</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>50</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>115</SpeedMultiplier>
+      <PAGrowth>50</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>35</MAGrowth>
+      <MAMultiplier>140</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>30</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>92</Id> <!-- Dancer / 踊り子 / Danseuse / Tänzerin -->
+      <JobCommandId>23</JobCommandId>
+      <InnateAbilityId1>486</InnateAbilityId1> <!-- Movement +1 -->
+      <InnateAbilityId2>468</InnateAbilityId2> <!-- Mage DEF UP -->
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Perfume, Cloak, Armlet, Ring, Armguard, Shoes, Clothing, HairAdornment, Hat, Cloth, Bag, Knife, Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>100</HPMultiplier>
+      <MPGrowth>10</MPGrowth>
+      <MPMultiplier>50</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>115</SpeedMultiplier>
+      <PAGrowth>35</PAGrowth>
+      <PAMultiplier>140</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump> <!-- Jump +1 -->
+      <CharacterEvasion>30</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>93</Id> <!-- Mime / ものまね士 / Mime / Pantomime -->
+      <JobCommandId>24</JobCommandId>
+      <InnateAbilityId1>469</InnateAbilityId1> <!-- Concentration-->
+      <InnateAbilityId2>472</InnateAbilityId2> <!-- Brawler -->
+      <InnateAbilityId3>478</InnateAbilityId3> <!-- Beastmaster -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth>
+      <HPMultiplier>180</HPMultiplier>
+      <MPGrowth>8</MPGrowth>
+      <MPMultiplier>50</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>120</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth>
+      <PAMultiplier>140</PAMultiplier>
+      <MAGrowth>40</MAGrowth>
+      <MAMultiplier>140</MAMultiplier>
+      <Move>7</Move>
+      <Jump>7</Jump>
+      <CharacterEvasion>33</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>None</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>0</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>94</Id> <!-- Chocobo / チョコボ / Chocobo / Chocobo -->
+      <JobCommandId>176</JobCommandId>
+      <InnateAbilityId1>503</InnateAbilityId1>
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Added Beastmaster -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth> <!-- HPGrowth from 8 to 7 -->
+      <HPMultiplier>140</HPMultiplier> <!-- HPMultiplier from 125 to 140 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>75</SpeedGrowth>
+      <SpeedMultiplier>119</SpeedMultiplier>
+      <PAGrowth>35</PAGrowth>
+      <PAMultiplier>98</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>94</MAMultiplier>
+      <Move>6</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>20</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>134</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>1</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>95</Id> <!-- Black Chocobo / 黒チョコボ / Chocobo noir / Schwarzer Chocobo -->
+      <JobCommandId>177</JobCommandId>
+      <InnateAbilityId1>503</InnateAbilityId1>
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Added Beastmaster -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth> <!-- HPGrowth from 7 to 6 -->
+      <HPMultiplier>120</HPMultiplier> <!-- HPMultiplier from 80 to 120 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>150</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>98</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>150</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>105</MAMultiplier>
+      <Move>6</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>25</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>134</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>1</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>96</Id> <!-- Red Chocobo / 赤チョコボ / Chocobo rouge / Roter Chocobo -->
+      <JobCommandId>178</JobCommandId>
+      <InnateAbilityId1>503</InnateAbilityId1>
+      <InnateAbilityId2>492</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Added Beastmaster -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>4</HPGrowth>
+      <HPMultiplier>130</HPMultiplier> <!-- HPMultiplier from 91 to 130 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>90</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>136</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>130</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>99</MAMultiplier>
+      <Move>6</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>134</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>1</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>97</Id> <!-- Goblin / ゴブリン / Gobelin / Goblin -->
+      <JobCommandId>179</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>479</InnateAbilityId2> <!-- Evasive Stance -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth> <!-- HPGrowth from 7 to 6 -->
+      <HPMultiplier>120</HPMultiplier> <!-- HPMultiplier from 117 to 120 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>40</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>98</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>85</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>18</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Ice</WeakElements>
+      <MonsterPortrait>135</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>2</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>98</Id> <!-- Black Goblin / ブラックゴブリン / Gobelin noir / Schwarzer Goblin -->
+      <JobCommandId>180</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>479</InnateAbilityId2>  <!-- Evasive Stance -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>477</InnateAbilityId4> <!-- Dual Wield -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>100</HPMultiplier> <!-- HPMultiplier from 86 to 100 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>35</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>114</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>103</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>87</MAMultiplier>
+      <Move>4</Move> <!-- Added Move +1 -->
+      <Jump>3</Jump>
+      <CharacterEvasion>19</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Ice</WeakElements>
+      <MonsterPortrait>135</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>2</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>99</Id> <!-- Gobbledygook / ガルブデガック / Gobeldygook / Gubeldubel -->
+      <JobCommandId>181</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>479</InnateAbilityId2> <!-- Evasive Stance -->
+      <InnateAbilityId3>453</InnateAbilityId3> <!-- Hamedo -->
+      <InnateAbilityId4>472</InnateAbilityId4> <!-- Brawler -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>120</HPMultiplier> <!-- 98 to 120 -->
+      <MPGrowth>10</MPGrowth> <!-- MPGrowth from 30 to 10 -->
+      <MPMultiplier>120</MPMultiplier> <!-- MPMultiplier from 75 to 120 -->
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>128</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>115</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>92</MAMultiplier>
+      <Move>4</Move> <!-- Move +1 -->
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Ice</WeakElements>
+      <MonsterPortrait>135</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>2</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>100</Id> <!-- Bomb / ボム / Bombo / Bomber -->
+      <JobCommandId>182</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Cannot Enter Water to Beastmaster -->
+      <InnateAbilityId2>506</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>433</InnateAbilityId4> <!-- Critical Quick -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth> <!-- HPGrowth from 7 to 6 -->
+      <HPMultiplier>110</HPMultiplier> <!-- HPMultiplier from 85 to 110 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>20</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>104</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>93</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Oil, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Fire</AbsorbElements>
+      <NullifyElements>Earth</NullifyElements>
+      <HalveElements>Ice</HalveElements>
+      <WeakElements>Water</WeakElements>
+      <MonsterPortrait>136</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>3</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>101</Id> <!-- Grenade / グレネイド / Grenade / Granate -->
+      <JobCommandId>183</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Cannot Enter Water to Beastmaster -->
+      <InnateAbilityId2>506</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>431</InnateAbilityId4> <!-- HP Restore -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth> <!-- HPGrowth from 7 to 6 -->
+      <HPMultiplier>110</HPMultiplier> <!-- HPMultiplier from 85 to 110 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>30</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>115</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>85</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>94</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>11</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Oil, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Fire</AbsorbElements>
+      <NullifyElements>Earth</NullifyElements>
+      <HalveElements>Ice</HalveElements>
+      <WeakElements>Water</WeakElements>
+      <MonsterPortrait>136</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>3</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>102</Id> <!-- Exploder / イクスプロジャ / Explosif / Explosio -->
+      <JobCommandId>184</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Cannot Enter Water to Beastmaster -->
+      <InnateAbilityId2>506</InnateAbilityId2>
+      <InnateAbilityId3>453</InnateAbilityId3> <!-- Hamedo -->
+      <InnateAbilityId4>0</InnateAbilityId4> 
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>5</HPGrowth> <!-- HPGrowth from 6 to 5 -->
+      <HPMultiplier>140</HPMultiplier> <!-- HPMultiplier from 124 to 140 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>40</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>116</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>96</MAMultiplier>
+      <Move>4</Move> <!-- Move +1 -->
+      <Jump>3</Jump>
+      <CharacterEvasion>12</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Oil, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Fire</AbsorbElements>
+      <NullifyElements>Earth</NullifyElements>
+      <HalveElements>Ice</HalveElements>
+      <WeakElements>Water</WeakElements>
+      <MonsterPortrait>136</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>3</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>103</Id> <!-- Red Panther / レッドパンサー / Panthère rouge / Rotpanther -->
+      <JobCommandId>185</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>492</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>478</InnateAbilityId4> <!-- Beastmaster -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>5</HPGrowth> <!-- 6 to 5 -->
+      <HPMultiplier>130</HPMultiplier> <!-- 116 to 130 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>50</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>116</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>98</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>91</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>23</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Earth</WeakElements>
+      <MonsterPortrait>137</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>4</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>104</Id> <!-- Coeurl / クアール / Coeurl / Coeurl -->
+      <JobCommandId>186</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>492</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>478</InnateAbilityId4> <!-- Beastmaster -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>5</HPGrowth> <!-- 6 to 5 -->
+      <HPMultiplier>120</HPMultiplier> <!-- 91 to 120 -->
+      <MPGrowth>10</MPGrowth> <!-- MPGrowth from 30 to 10 -->
+      <MPMultiplier>60</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>129</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>116</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>105</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>26</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Earth</WeakElements>
+      <MonsterPortrait>137</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>4</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>105</Id> <!-- Vampire Cat / バンパイア / Coeurl vampire / Vampirkatze -->
+      <JobCommandId>187</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>492</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>478</InnateAbilityId4> <!-- Beastmaster -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>4</HPGrowth> <!-- 6 to 4 -->
+      <HPMultiplier>120</HPMultiplier> <!-- 99 to 120 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>70</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>134</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>132</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>85</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>24</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Earth</WeakElements>
+      <MonsterPortrait>137</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>4</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>106</Id> <!-- Piscodaemon / ピスコディーモン / Piscodémon / Pisco-Dämon -->
+      <JobCommandId>188</JobCommandId>
+      <InnateAbilityId1>0</InnateAbilityId1>
+      <InnateAbilityId2>505</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>428</InnateAbilityId4> <!-- Regenerate -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>108</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>120</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>111</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>90</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>96</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>8</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Water</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Lightning</WeakElements>
+      <MonsterPortrait>138</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>5</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>107</Id> <!-- Squidraken / スクイドラーケン / Pieuvraken / Vikalmar -->
+      <JobCommandId>189</JobCommandId>
+      <InnateAbilityId1>0</InnateAbilityId1>
+      <InnateAbilityId2>505</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>428</InnateAbilityId4> <!-- Regenerate -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>115</HPMultiplier>
+      <MPGrowth>10</MPGrowth> <!-- 30 to 10 -->
+      <MPMultiplier>115</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>101</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>101</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>96</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>9</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Water</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Lightning</WeakElements>
+      <MonsterPortrait>138</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>5</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>108</Id> <!-- Mindflayer / マインドフレイア / Flagelleur mental / Gedankenschinder -->
+      <JobCommandId>190</JobCommandId>
+      <InnateAbilityId1>0</InnateAbilityId1>
+      <InnateAbilityId2>505</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>428</InnateAbilityId4> <!-- Regenerate -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>92</HPMultiplier>
+      <MPGrowth>20</MPGrowth> <!-- 30 to 20 -->
+      <MPMultiplier>160</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>112</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>127</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>92</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Water</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Lightning</WeakElements>
+      <MonsterPortrait>138</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>5</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>109</Id> <!-- Skeleton / スケルトン / Homme-squelette / Skelett -->
+      <JobCommandId>191</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>482</InnateAbilityId4> <!-- Swiftspell -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>4</HPGrowth> <!-- 5 to 4 -->
+      <HPMultiplier>135</HPMultiplier> <!-- 115 to 135 -->
+      <MPGrowth>10</MPGrowth> <!-- HPGrowth from 30 to 10 -->
+      <MPMultiplier>95</MPMultiplier> <!-- MPMultiplier from 5 to 95 -->
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>120</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>108</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>85</MAMultiplier>
+      <Move>3</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>11</CharacterEvasion>
+      <InnateStatus>Undead</InnateStatus>
+      <ImmuneStatus>Regen, Poison, Reraise, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Dark</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Holy, Fire</WeakElements>
+      <MonsterPortrait>139</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>6</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>110</Id> <!-- Bonesnatch / ボーンスナッチ / Désosseur / Knochenfang -->
+      <JobCommandId>192</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>506</InnateAbilityId4> <!-- Levitate -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>4</HPGrowth> <!-- 5 to 4 -->
+      <HPMultiplier>120</HPMultiplier> <!-- 90 to 120 -->
+      <MPGrowth>10</MPGrowth> <!-- MPGrowth from 30 to 10 -->
+      <MPMultiplier>70</MPMultiplier> <!--MPMultiplier from 4 to 70 -->
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>106</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>123</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>87</MAMultiplier>
+      <Move>3</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>12</CharacterEvasion>
+      <InnateStatus>Undead</InnateStatus>
+      <ImmuneStatus>Regen, Poison, Reraise, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Dark</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Holy, Fire</WeakElements>
+      <MonsterPortrait>139</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>6</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>111</Id> <!-- Skeletal Fiend / リビングボーン / Os-vivant / Gerippe -->
+      <JobCommandId>193</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>498</InnateAbilityId4> <!-- Teleport -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>4</HPGrowth> <!-- 5 to 4 -->
+      <HPMultiplier>120</HPMultiplier> <!-- 101 to 120 -->
+      <MPGrowth>10</MPGrowth> <!-- MPGrowth from 30 to 10 -->
+      <MPMultiplier>60</MPMultiplier> <!-- MPMultiplier from 3 to 60 -->
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>102</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>125</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>88</MAMultiplier>
+      <Move>3</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>13</CharacterEvasion>
+      <InnateStatus>Undead</InnateStatus>
+      <ImmuneStatus>Regen, Poison, Reraise, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Dark</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Holy, Fire</WeakElements>
+      <MonsterPortrait>139</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>6</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>112</Id> <!-- Ghoul / グール / Goule / Ghul -->
+      <JobCommandId>194</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>506</InnateAbilityId2>
+      <InnateAbilityId3>451</InnateAbilityId3> <!-- Counter replaced with Blade Grasp -->
+      <InnateAbilityId4>498</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>83</HPMultiplier>
+      <MPGrowth>10</MPGrowth> <!-- 30 to 10 -->
+      <MPMultiplier>124</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>103</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>90</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>105</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>22</CharacterEvasion> <!-- Evasion from 26 to 22 -->
+      <InnateStatus>Undead</InnateStatus>
+      <ImmuneStatus>Regen, Poison, Reraise, Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Dark</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Holy, Fire</WeakElements>
+      <MonsterPortrait>140</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>7</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>113</Id> <!-- Ghast / ガスト / Blafard / Schreck -->
+      <JobCommandId>195</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>506</InnateAbilityId2>
+      <InnateAbilityId3>451</InnateAbilityId3> <!-- Counter replaced with Blade Grasp -->
+      <InnateAbilityId4>498</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>82</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>96</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>110</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>93</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>106</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>24</CharacterEvasion> <!-- Evasion from 27 to 24 -->
+      <InnateStatus>Undead</InnateStatus>
+      <ImmuneStatus>Regen, Poison, Reraise, Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Dark</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Holy, Fire</WeakElements>
+      <MonsterPortrait>140</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>7</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>114</Id> <!-- Revenant / レブナント / Revenant / Wiedergänger -->
+      <JobCommandId>196</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>506</InnateAbilityId2>
+      <InnateAbilityId3>451</InnateAbilityId3> <!-- Counter replaced with Blade Grasp -->
+      <InnateAbilityId4>498</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>93</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>64</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>121</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>97</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>110</MAMultiplier>
+      <Move>5</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>26</CharacterEvasion> <!-- Evasion from 28 to 26 -->
+      <InnateStatus>Undead</InnateStatus>
+      <ImmuneStatus>Regen, Poison, Reraise, Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Dark</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Holy, Fire</WeakElements>
+      <MonsterPortrait>140</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>7</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>115</Id> <!-- Floating Eye / フロータイボール / Œil flottant / Schwebauge -->
+      <JobCommandId>197</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>482</InnateAbilityId4> <!-- Swiftspell -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>80</HPMultiplier>
+      <MPGrowth>10</MPGrowth> <!-- 30 to 10 -->
+      <MPMultiplier>80</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>104</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth>
+      <PAMultiplier>90</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>89</MAMultiplier>
+      <Move>5</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>18</CharacterEvasion> <!-- 12 to 18 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire, Poison</ImmuneStatus> <!-- Immunity Poison -->
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Wind</HalveElements>
+      <WeakElements>None</WeakElements> <!-- Removed Weak Element Ice -->
+      <MonsterPortrait>141</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>8</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>116</Id> <!-- Ahriman / アーリマン / Ahriman / Ahriman -->
+      <JobCommandId>198</JobCommandId>
+      <InnateAbilityId1>502</InnateAbilityId1> <!-- Waterwalk -->
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>435</InnateAbilityId4> <!-- Counter Magic -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>75</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>95</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>95</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth>
+      <PAMultiplier>140</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>95</MAMultiplier>
+      <Move>5</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>19</CharacterEvasion> <!-- 13 to 19 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire, Poison</ImmuneStatus> <!-- Immunity Poison -->
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Wind</HalveElements>
+      <WeakElements>None</WeakElements>  <!-- Removed Weak Element Ice -->
+      <MonsterPortrait>141</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>8</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>117</Id> <!-- Plague Horror / プレイグ / Œil pestilentiel / Teufelsauge -->
+      <JobCommandId>199</JobCommandId>
+      <InnateAbilityId1>502</InnateAbilityId1> <!-- Waterwalk -->
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>482</InnateAbilityId4> <!-- Swiftspell -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>77</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>140</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>108</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth>
+      <PAMultiplier>127</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>120</MAMultiplier>
+      <Move>5</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>17</CharacterEvasion> <!-- 11 to 17 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire, Poison</ImmuneStatus> <!-- Immunity Poison -->
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Wind</HalveElements>
+      <WeakElements>None</WeakElements>  <!-- Removed Weak Element Ice -->
+      <MonsterPortrait>141</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>8</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>118</Id> <!-- Jura Aevis / ジュラエイビス / Juraeibis / Jura-Avis -->
+      <JobCommandId>200</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>425</InnateAbilityId4> <!-- Vanish -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>90</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>40</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>113</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>105</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>85</MAMultiplier>
+      <Move>6</Move>
+      <Jump>6</Jump>
+      <CharacterEvasion>30</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Wind</HalveElements>
+      <WeakElements>Earth</WeakElements>
+      <MonsterPortrait>142</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>9</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>119</Id> <!-- Steelhawk / スチールホーク / Faucon d'acier / Stahlfalke -->
+      <JobCommandId>201</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>425</InnateAbilityId4> <!-- Vanish -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>85</HPMultiplier>
+      <MPGrowth>20</MPGrowth> <!-- MPGrowth from 30 to 20 -->
+      <MPMultiplier>80</MPMultiplier> <!-- 60 to 80 -->
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>131</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>108</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>90</MAMultiplier>
+      <Move>6</Move>
+      <Jump>6</Jump>
+      <CharacterEvasion>28</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Wind</HalveElements>
+      <WeakElements>Earth</WeakElements>
+      <MonsterPortrait>142</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>9</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>120</Id> <!-- Cockatrice / コカトリス / Cocatrix / Cockatrice -->
+      <JobCommandId>202</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>425</InnateAbilityId4> <!-- Vanish -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>101</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>10</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>135</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>152</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>6</Move>
+      <Jump>6</Jump>
+      <CharacterEvasion>33</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>Wind</HalveElements>
+      <WeakElements>Earth</WeakElements>
+      <MonsterPortrait>142</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>9</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>121</Id> <!-- Pig / うりぼう / Marcassin / Schwein -->
+      <JobCommandId>203</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>445</InnateAbilityId4> <!-- Mana Shield -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth>
+      <HPMultiplier>69</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>1</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>140</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>70</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>110</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>42</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>143</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>10</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>122</Id> <!-- Swine / ポーキー / Porcelet / Schweinchen -->
+      <JobCommandId>204</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>449</InnateAbilityId2> <!-- Reflexes -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth>
+      <HPMultiplier>83</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>1</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>139</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>80</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>110</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>36</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>143</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>10</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>123</Id> <!-- Wild Boar / ワイルドボー / Sanglier / Wildschwein -->
+      <JobCommandId>205</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>449</InnateAbilityId2> <!-- Reflexes -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth>
+      <HPMultiplier>77</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>1</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>138</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>160</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>110</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>39</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>143</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>10</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>124</Id> <!-- Dryad / ウッドマン / Sylvanien / Dryade -->
+      <JobCommandId>206</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>150</HPMultiplier>
+      <MPGrowth>12</MPGrowth> <!-- MPGrowth from 30 to 12 -->
+      <MPMultiplier>160</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>99</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>102</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion> <!-- 0 to 10 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>Haste</StartingStatus> <!-- Treants get StartingStatus: Haste -->
+      <AbsorbElements>Earth</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Fire</WeakElements>
+      <MonsterPortrait>144</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>11</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>125</Id> <!-- Treant / トレント / Tréant / Baumschrat -->
+      <JobCommandId>207</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>130</HPMultiplier>
+      <MPGrowth>12</MPGrowth> <!-- MPGrowth from 30 to 12 -->
+      <MPMultiplier>180</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>96</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>89</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>95</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>13</CharacterEvasion> <!-- 0 to 13 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>Haste</StartingStatus> <!-- Treants get StartingStatus: Haste -->
+      <AbsorbElements>Earth</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Fire</WeakElements>
+      <MonsterPortrait>144</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>11</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>126</Id> <!-- Elder Treant / タイジユ / Ent / Baumweise -->
+      <JobCommandId>208</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>478</InnateAbilityId4> <!-- Beastmaster -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth>
+      <HPMultiplier>175</HPMultiplier>
+      <MPGrowth>10</MPGrowth> <!-- MPGrowth from 30 to 10 -->
+      <MPMultiplier>150</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>94</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>97</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>99</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>16</CharacterEvasion> <!-- 0 to 16 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>Haste</StartingStatus> <!-- Treants get StartingStatus: Haste -->
+      <AbsorbElements>Earth</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Fire</WeakElements>
+      <MonsterPortrait>144</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>11</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>127</Id> <!-- Wisenkin / 牛鬼 / Bonnacon / Stiergötze -->
+      <JobCommandId>209</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>465</InnateAbilityId4> <!-- ATK Boost -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>135</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>5</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>107</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>120</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>11</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Water</WeakElements>
+      <MonsterPortrait>145</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>12</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>128</Id> <!-- Minotaur / ミノタウロス / Minotaure / Minotaurus -->
+      <JobCommandId>210</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>465</InnateAbilityId4> <!-- ATK Boost -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>160</HPMultiplier>
+      <MPGrowth>12</MPGrowth> <!-- MPGrowth from 30 to 12 -->
+      <MPMultiplier>100</MPMultiplier> <!-- 8 to 100 -->
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>108</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>152</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>15</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Water</WeakElements>
+      <MonsterPortrait>145</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>12</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>129</Id> <!-- Sekhret / セクレト / Sekhret / Secreto -->
+      <JobCommandId>211</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Beastmaster -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>465</InnateAbilityId4> <!-- ATK Boost -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>151</HPMultiplier>
+      <MPGrowth>12</MPGrowth> <!-- MPGrowth from 30 to 12 -->
+      <MPMultiplier>100</MPMultiplier> <!-- 8 to 100 -->
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>122</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>173</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>12</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Water</WeakElements>
+      <MonsterPortrait>145</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>12</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>130</Id> <!-- Malboro / モルボル / Morbol / Morbol -->
+      <JobCommandId>212</JobCommandId>
+      <InnateAbilityId1>0</InnateAbilityId1>
+      <InnateAbilityId2>502</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>424</InnateAbilityId4> <!-- Speed Surge -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth>
+      <HPMultiplier>175</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>15</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>102</SpeedMultiplier>  <!-- Added +5 SpeedMultiplier -->
+      <PAGrowth>38</PAGrowth>
+      <PAMultiplier>105</PAMultiplier>
+      <MAGrowth>30</MAGrowth>
+      <MAMultiplier>99</MAMultiplier>
+      <Move>5</Move> <!-- Move +2 -->
+      <Jump>131</Jump>
+      <CharacterEvasion>12</CharacterEvasion> <!-- 0 to 12 -->
+      <InnateStatus>Regen</InnateStatus> <!-- Added Innate Regen -->
+      <ImmuneStatus>Float, Vampire, Poison</ImmuneStatus> <!-- Added Immunity to Poison -->
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>  <!-- Removed Weak Element Ice -->
+      <MonsterPortrait>146</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>13</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>131</Id> <!-- Ochu / オチュー / Otyugh / Ochu -->
+      <JobCommandId>213</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>502</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>424</InnateAbilityId4> <!-- Speed Surge -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth>
+      <HPMultiplier>145</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>15</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>100</SpeedMultiplier>  <!-- Added +5 SpeedMultiplier -->
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>110</PAMultiplier>
+      <MAGrowth>27</MAGrowth>
+      <MAMultiplier>110</MAMultiplier>
+      <Move>5</Move> <!-- Move +2 -->
+      <Jump>131</Jump>
+      <CharacterEvasion>16</CharacterEvasion> <!-- 0 to 16 -->
+      <InnateStatus>Regen</InnateStatus>   <!-- Added Innate Regen -->
+      <ImmuneStatus>Float, Vampire, Poison</ImmuneStatus> <!-- Added Immunity to Poison -->
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>  <!-- Removed Weak Element Ice -->
+      <MonsterPortrait>146</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>13</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>132</Id> <!-- Greater Malboro / モルボルグレイト / Morbol ancien / Groß-Morbol -->
+      <JobCommandId>214</JobCommandId>
+      <InnateAbilityId1>0</InnateAbilityId1>
+      <InnateAbilityId2>502</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>424</InnateAbilityId4> <!-- Speed Surge -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>8</HPGrowth>
+      <HPMultiplier>181</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>10</MPMultiplier>
+      <SpeedGrowth>88</SpeedGrowth>
+      <SpeedMultiplier>98</SpeedMultiplier> <!-- Added +5 SpeedMultiplier -->
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>98</PAMultiplier>
+      <MAGrowth>24</MAGrowth>
+      <MAMultiplier>95</MAMultiplier>
+      <Move>5</Move> <!-- Move +2 -->
+      <Jump>131</Jump>
+      <CharacterEvasion>20</CharacterEvasion> <!-- 0 to 20 -->
+      <InnateStatus>Regen</InnateStatus>  <!-- Added Innate Regen -->
+      <ImmuneStatus>Float, Vampire, Poison</ImmuneStatus> <!-- Added Immunity to Poison -->
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements> <!-- Removed Weak Element Ice -->
+      <MonsterPortrait>146</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>13</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>133</Id> <!-- Behemoth / ベヒーモス / Béhémoth / Behemoth -->
+      <JobCommandId>215</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>434</InnateAbilityId4> <!-- Bonecrusher -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>5</HPGrowth>
+      <HPMultiplier>140</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>120</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>117</SpeedMultiplier>
+      <PAGrowth>36</PAGrowth>
+      <PAMultiplier>134</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>105</MAMultiplier>
+      <Move>4</Move>
+      <Jump>131</Jump>
+      <CharacterEvasion>13</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>147</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>14</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>134</Id> <!-- Behemoth King / キングベヒーモス / Béhémoth roi / Behemoth-König -->
+      <JobCommandId>216</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Beastmaster -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>434</InnateAbilityId4> <!-- Bonecrusher -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>5</HPGrowth>
+      <HPMultiplier>150</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>140</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>123</SpeedMultiplier>
+      <PAGrowth>35</PAGrowth>
+      <PAMultiplier>149</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>131</Jump>
+      <CharacterEvasion>13</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>147</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>14</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>135</Id> <!-- Dark Behemoth / ダークベヒーモス / Béhémoth sombre / Schatten-Behemoth -->
+      <JobCommandId>217</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>434</InnateAbilityId4> <!-- Bonecrusher -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>5</HPGrowth>
+      <HPMultiplier>161</HPMultiplier>
+      <MPGrowth>8</MPGrowth> <!-- 30 to 8 -->
+      <MPMultiplier>160</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>125</SpeedMultiplier>
+      <PAGrowth>34</PAGrowth>
+      <PAMultiplier>200</PAMultiplier>
+      <MAGrowth>6</MAGrowth>
+      <MAMultiplier>95</MAMultiplier>
+      <Move>4</Move>
+      <Jump>131</Jump>
+      <CharacterEvasion>18</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>147</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>14</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>136</Id> <!-- Dragon / ドラゴン / Dragon / Drache -->
+      <JobCommandId>218</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Beastmaster -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>428</InnateAbilityId4> <!-- Regenerate -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>133</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>75</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>118</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>136</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>5</Move>
+      <Jump>131</Jump>
+      <CharacterEvasion>5</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>148</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>15</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>137</Id> <!-- Blue Dragon / ブルードラゴン / Dragon bleu / Blauer Drache -->
+      <JobCommandId>219</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>428</InnateAbilityId4> <!-- Regenerate -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>135</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>110</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>124</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>130</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>105</MAMultiplier>
+      <Move>5</Move>
+      <Jump>131</Jump>
+      <CharacterEvasion>9</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Ice</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Fire</WeakElements>
+      <MonsterPortrait>148</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>15</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>138</Id> <!-- Red Dragon / レッドドラゴン / Dragon rouge / Roter Drache -->
+      <JobCommandId>220</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>428</InnateAbilityId4> <!-- Regenerate -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>157</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>115</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>132</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>147</PAMultiplier>
+      <MAGrowth>6</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>5</Move>
+      <Jump>131</Jump>
+      <CharacterEvasion>8</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Fire</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Ice</WeakElements>
+      <MonsterPortrait>148</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>15</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>139</Id> <!-- Hydra / ヒュドラ / Hydre / Hydra -->
+      <JobCommandId>221</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>453</InnateAbilityId3> <!-- Hamedo -->
+      <InnateAbilityId4>482</InnateAbilityId4> <!-- Swiftspell -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>3</HPGrowth>
+      <HPMultiplier>80</HPMultiplier>
+      <MPGrowth>6</MPGrowth> <!-- 30 to 6 -->
+      <MPMultiplier>120</MPMultiplier> <!-- 50 to 120 -->
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>126</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>133</PAMultiplier>
+      <MAGrowth>33</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>132</Jump>
+      <CharacterEvasion>10</CharacterEvasion> <!-- 0 to 10 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Wind, Ice</WeakElements>
+      <MonsterPortrait>149</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>16</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>140</Id> <!-- Greater Hydra / ハイドラ / Guivre / Ghidra -->
+      <JobCommandId>222</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>453</InnateAbilityId3> <!-- Hamedo -->
+      <InnateAbilityId4>482</InnateAbilityId4> <!-- Swiftspell -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>3</HPGrowth>
+      <HPMultiplier>100</HPMultiplier>
+      <MPGrowth>6</MPGrowth> <!-- 30 to 6 -->
+      <MPMultiplier>160</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>133</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>151</PAMultiplier>
+      <MAGrowth>31</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>132</Jump>
+      <CharacterEvasion>14</CharacterEvasion> <!-- 0 to 14 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Wind, Ice</WeakElements>
+      <MonsterPortrait>149</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>16</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>141</Id> <!-- Tiamat / ティアマット / Tiamat / Tiamat -->
+      <JobCommandId>223</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>507</InnateAbilityId2>
+      <InnateAbilityId3>453</InnateAbilityId3> <!-- Hamedo -->
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>3</HPGrowth>
+      <HPMultiplier>112</HPMultiplier>
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>90</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>137</SpeedMultiplier>
+      <PAGrowth>35</PAGrowth>
+      <PAMultiplier>175</PAMultiplier>
+      <MAGrowth>29</MAGrowth>
+      <MAMultiplier>120</MAMultiplier>
+      <Move>4</Move>
+      <Jump>132</Jump>
+      <CharacterEvasion>18</CharacterEvasion> <!-- 0 to 18 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Wind, Ice</WeakElements>
+      <MonsterPortrait>149</MonsterPortrait>
+      <MonsterPalette>2</MonsterPalette>
+      <MonsterGraphic>16</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>144</Id> <!-- Byblos / ビブロス / Byblos / Byblos -->
+      <JobCommandId>170</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>492</InnateAbilityId2>
+      <InnateAbilityId3>471</InnateAbilityId3>
+      <InnateAbilityId4>442</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>130</HPMultiplier>
+      <MPGrowth>7</MPGrowth>
+      <MPMultiplier>110</MPMultiplier>
+      <SpeedGrowth>75</SpeedGrowth>
+      <SpeedMultiplier>104</SpeedMultiplier>
+      <PAGrowth>40</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>35</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move> <!-- Added Move +1 -->
+      <Jump>6</Jump>
+      <CharacterEvasion>33</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire, Traitor</ImmuneStatus>
+      <StartingStatus>Reraise</StartingStatus> <!-- Added StartingStatus: Reraise -->
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Fire</WeakElements>
+      <MonsterPortrait>150</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>145</Id> <!-- Automaton / 鉄巨人 / Géant de fer / Eisengigant : adding item command doesn't work unfortunately. Buffed HP Growth, PHYS, Speed -->
+      <JobCommandId>171</JobCommandId>
+      <InnateAbilityId1>431</InnateAbilityId1> <!-- Replaces 497 No Water with 431 Critical: Recover HP -->
+      <InnateAbilityId2>493</InnateAbilityId2> <!-- Replaces 500 Ignore Weather with 493 Lifefont -->
+      <InnateAbilityId3>507</InnateAbilityId3> <!-- Replaces 501 Ignore Terrain with 507 Fly -->
+      <InnateAbilityId4>442</InnateAbilityId4> <!-- Counter -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>4</HPGrowth> <!-- 5 to 4 -->
+      <HPMultiplier>140</HPMultiplier> <!-- 120 to 140 -->
+      <MPGrowth>100</MPGrowth>
+      <MPMultiplier>0</MPMultiplier>
+      <SpeedGrowth>80</SpeedGrowth> <!-- 85 to 80 -->
+      <SpeedMultiplier>110</SpeedMultiplier> <!-- 105 to 110 -->
+      <PAGrowth>35</PAGrowth> <!-- 40 to 35 -->
+      <PAMultiplier>170</PAMultiplier> <!-- 156 to 170 -->
+      <MAGrowth>100</MAGrowth>
+      <MAMultiplier>0</MAMultiplier>
+      <Move>5</Move> <!-- 4 to 5 -->
+      <Jump>131</Jump>
+      <CharacterEvasion>20</CharacterEvasion> <!-- 0 to 20 -->
+      <InnateStatus>Atheist</InnateStatus>
+      <ImmuneStatus>Doom, Reflect, Disable, Immobilize, Sleep, Charm, Faith, Stop, Slow, Haste, Shell, Protect, Regen, Poison, Toad, Chicken, Berserk, Invisible, Reraise, Float, Oil, Vampire, Silence, Blind, Traitor, Stone, Undead, KO</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>Dark, Holy, Earth, Wind, Ice, Fire</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Lightning</WeakElements>
+      <MonsterPortrait>154</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>150</Id> <!-- Reaver / アパンダ / Apanda / Avanda -->
+      <JobCommandId>172</JobCommandId>
+      <InnateAbilityId1>467</InnateAbilityId1> <!-- Replaced Cannot Enter Water with Magic ATK UP -->
+      <InnateAbilityId2>492</InnateAbilityId2>
+      <InnateAbilityId3>482</InnateAbilityId3>
+      <InnateAbilityId4>442</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>140</HPMultiplier>
+      <MPGrowth>7</MPGrowth>
+      <MPMultiplier>120</MPMultiplier>
+      <SpeedGrowth>98</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>36</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>35</MAGrowth>
+      <MAMultiplier>100</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Vampire, Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Fire</WeakElements>
+      <MonsterPortrait>150</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>151</Id> <!-- Keeper of Darkness / 悪魔王 / Roi-démon / Dämonenkönig -->
+      <JobCommandId>173</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>0</InnateAbilityId2>
+      <InnateAbilityId3>482</InnateAbilityId3>
+      <InnateAbilityId4>442</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>10</HPGrowth>
+      <HPMultiplier>100</HPMultiplier>
+      <MPGrowth>8</MPGrowth>
+      <MPMultiplier>150</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>90</SpeedMultiplier>
+      <PAGrowth>70</PAGrowth>
+      <PAMultiplier>50</PAMultiplier>
+      <MAGrowth>50</MAGrowth>
+      <MAMultiplier>125</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>3</CharacterEvasion>
+      <InnateStatus>None</InnateStatus> <!-- Added Immunity: Slow -->
+      <ImmuneStatus>Slow, Doom, Disable, Immobilize, Sleep, Charm, Regen, Poison, Chicken, Berserk, Invisible, Reraise, Float, Chest, Vampire, Silence, Confuse, Traitor, Stone, Undead, KO, Crystal</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>Ice</NullifyElements>
+      <HalveElements>Dark</HalveElements> <!-- Half Dark Element -->
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>151</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>153</Id> <!-- Archaeodaemon / アルケオデーモン / Archéodémon / Archäodämon --> <!-- Demonic Summons -->
+      <JobCommandId>174</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>442</InnateAbilityId2>
+      <InnateAbilityId3>482</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth> <!-- HPGrowth from 8 to 6 -->
+      <HPMultiplier>145</HPMultiplier> <!-- HPMultiplier from 140 to 145 -->
+      <MPGrowth>9</MPGrowth>
+      <MPMultiplier>200</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>111</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>130</PAMultiplier>
+      <MAGrowth>45</MAGrowth>
+      <MAMultiplier>145</MAMultiplier>
+      <Move>4</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>20</CharacterEvasion> <!-- Evasion from 5 to 20 -->
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Invisible, Float, Vampire, Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements> <!-- Changed Immunity : Holy to Halve Elements : Holy -->
+      <HalveElements>Dark, Holy</HalveElements> <!-- Half Dark Ele, Half Holy -->
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>153</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>154</Id> <!-- Ultima Demon / アルテマデーモン / Ultimodémon / Ultima-Dämon -->
+      <JobCommandId>175</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>472</InnateAbilityId2>
+      <InnateAbilityId3>482</InnateAbilityId3>
+      <InnateAbilityId4>442</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>9</HPGrowth>
+      <HPMultiplier>155</HPMultiplier>
+      <MPGrowth>8</MPGrowth>
+      <MPMultiplier>180</MPMultiplier>
+      <SpeedGrowth>100</SpeedGrowth>
+      <SpeedMultiplier>106</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>135</PAMultiplier>
+      <MAGrowth>43</MAGrowth>
+      <MAMultiplier>128</MAMultiplier>
+      <Move>5</Move>
+      <Jump>2</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Invisible, Float, Vampire, Traitor</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>Holy</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>153</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>0</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>169</Id> <!-- Red Panther / レッドパンサー / Panthère rouge / Rotpanther -->
+      <JobCommandId>185</JobCommandId>
+      <InnateAbilityId1>497</InnateAbilityId1>
+      <InnateAbilityId2>492</InnateAbilityId2>
+      <InnateAbilityId3>0</InnateAbilityId3>
+      <InnateAbilityId4>478</InnateAbilityId4> <!-- Beastmaster -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>5</HPGrowth> <!-- 6 to 5 -->
+      <HPMultiplier>130</HPMultiplier> <!-- 116 to 130 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>50</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>116</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>98</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>91</MAMultiplier>
+      <Move>4</Move>
+      <Jump>4</Jump>
+      <CharacterEvasion>23</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Earth</WeakElements>
+      <MonsterPortrait>137</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>4</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>170</Id> <!-- Goblin / ゴブリン / Gobelin / Goblin -->
+      <JobCommandId>179</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>479</InnateAbilityId2> <!-- Evasive Stance -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth> <!-- HPGrowth from 7 to 6 -->
+      <HPMultiplier>120</HPMultiplier> <!-- HPMultiplier from 117 to 120 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>40</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>105</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>98</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>85</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>18</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Ice</WeakElements>
+      <MonsterPortrait>135</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>2</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>171</Id> <!-- Black Goblin / ブラックゴブリン / Gobelin noir / Schwarzer Goblin -->
+      <JobCommandId>180</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Beastmaster -->
+      <InnateAbilityId2>479</InnateAbilityId2>  <!-- Evasive Stance -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>477</InnateAbilityId4> <!-- Dual Wield -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth>
+      <HPMultiplier>100</HPMultiplier> <!-- 86 to 100 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>35</MPMultiplier>
+      <SpeedGrowth>85</SpeedGrowth>
+      <SpeedMultiplier>114</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>103</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>87</MAMultiplier>
+      <Move>4</Move> <!-- Move+1 -->
+      <Jump>3</Jump>
+      <CharacterEvasion>19</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>Ice</WeakElements>
+      <MonsterPortrait>135</MonsterPortrait>
+      <MonsterPalette>1</MonsterPalette>
+      <MonsterGraphic>2</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>172</Id> <!-- Bomb / ボム / Bombo / Bomber -->
+      <JobCommandId>182</JobCommandId>
+      <InnateAbilityId1>478</InnateAbilityId1> <!-- Cannot Enter Water to Beastmaster -->
+      <InnateAbilityId2>506</InnateAbilityId2>
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>433</InnateAbilityId4> <!-- Critical Quick -->
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>6</HPGrowth> <!-- HPGrowth from 7 to 6 -->
+      <HPMultiplier>110</HPMultiplier> <!-- HPMultiplier from 85 to 110 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>20</MPMultiplier>
+      <SpeedGrowth>90</SpeedGrowth>
+      <SpeedMultiplier>104</SpeedMultiplier>
+      <PAGrowth>39</PAGrowth>
+      <PAMultiplier>100</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>93</MAMultiplier>
+      <Move>3</Move>
+      <Jump>3</Jump>
+      <CharacterEvasion>10</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Float, Oil, Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>Fire</AbsorbElements>
+      <NullifyElements>Earth</NullifyElements>
+      <HalveElements>Ice</HalveElements>
+      <WeakElements>Water</WeakElements>
+      <MonsterPortrait>136</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>3</MonsterGraphic>
+    </Job>
+    <Job>
+      <Id>173</Id> <!-- Chocobo / チョコボ / Chocobo / Chocobo -->
+      <JobCommandId>176</JobCommandId>
+      <InnateAbilityId1>503</InnateAbilityId1>
+      <InnateAbilityId2>478</InnateAbilityId2> <!-- Added Beastmaster -->
+      <InnateAbilityId3>442</InnateAbilityId3>
+      <InnateAbilityId4>0</InnateAbilityId4>
+      <EquippableItems>Unarmed</EquippableItems>
+      <HPGrowth>7</HPGrowth> <!-- HPGrowth from 8 to 7 -->
+      <HPMultiplier>140</HPMultiplier> <!-- HPMultiplier from 125 to 140 -->
+      <MPGrowth>30</MPGrowth>
+      <MPMultiplier>100</MPMultiplier>
+      <SpeedGrowth>75</SpeedGrowth>
+      <SpeedMultiplier>119</SpeedMultiplier>
+      <PAGrowth>35</PAGrowth>
+      <PAMultiplier>98</PAMultiplier>
+      <MAGrowth>7</MAGrowth>
+      <MAMultiplier>94</MAMultiplier>
+      <Move>6</Move>
+      <Jump>5</Jump>
+      <CharacterEvasion>20</CharacterEvasion>
+      <InnateStatus>None</InnateStatus>
+      <ImmuneStatus>Vampire</ImmuneStatus>
+      <StartingStatus>None</StartingStatus>
+      <AbsorbElements>None</AbsorbElements>
+      <NullifyElements>None</NullifyElements>
+      <HalveElements>None</HalveElements>
+      <WeakElements>None</WeakElements>
+      <MonsterPortrait>134</MonsterPortrait>
+      <MonsterPalette>0</MonsterPalette>
+      <MonsterGraphic>1</MonsterGraphic>
+    </Job>
+  </Entries>
+</JobTable>

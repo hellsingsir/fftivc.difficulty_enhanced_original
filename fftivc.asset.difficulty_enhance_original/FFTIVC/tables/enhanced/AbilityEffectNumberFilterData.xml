@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+This table file is used to overwrite the game's hardcoded ability effect table.
+
+Refer to: https://ffhacktics.com/wiki/Effects and https://ffhacktics.com/smf/index.php?topic=4830.0
+This table is only used to determine which effect is used when an ability is executed.
+
+You can use this file as a base to edit Ability Effects data in your mod.
+Simply copy this file to your mod's folder under FFTIVC/tables/<enhanced/classic/combined>/AbilityEffectData.xml.
+
+IMPORTANT: You are free to remove everything and **SHOULD ONLY LEAVE ELEMENTS THAT YOU HAVE EDITED** to avoid conflicts between mods.
+Only properties that are actually included in this file will be tracked as edited. Properties not edited will inherit their
+value from the original table or, from other mods making changes depending on mod order.
+
+IMPORTANT 2: The Id property must NOT be removed for nodes that you're leaving here!
+
+IMPORTANT 3: Id cannot be more than 453 (hardcoded table size is 454).
+
+-->
+
+<AbilityEffectNumberFilterData>
+  <Version>1</Version>
+  <Entries>
+    <AbilityEffectNumberFilter>
+      <Id>203</Id> <!-- Bio (Biora) / あくまの視線 / Regard démoniaque / Teufelsblick -->
+      <EffectId>28</EffectId> <!-- Effect changed from 213 to 28 (Poison Animation)-->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>205</Id> <!-- Toadra (Biora) / あくまの視線 / Regard démoniaque / Teufelsblick -->
+      <EffectId>29</EffectId> <!-- Effect changed from 213 to 29 (Toad Animation)-->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>301</Id> <!-- Bewitching Gaze (Heretic Stasis) / あくまの視線 / Regard démoniaque / Teufelsblick -->
+      <EffectId>340</EffectId> <!-- Effect changed from 352 to 340 (Level Drain Animation)-->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>311</Id> <!-- Snort (Allure) / はないき / Souffle nasal / Schnauben -->
+      <EffectId>211</EffectId> <!-- 362 to 211 (Allure Animation) -->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>312</Id> <!-- Squeal (Angelic Revive) / ブヒー / Gruik ! / Grunz -->
+      <EffectId>234</EffectId> <!-- Effect changed to Gravi2 -->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>331</Id> <!-- Heave (Ōkami Strike) / ブヒー / Gruik ! / Grunz -->
+      <EffectId>96</EffectId> <!-- Effect changed to Repeating Fist -->
+    </AbilityEffectNumberFilter>
+     <AbilityEffectNumberFilter>
+      <Id>359</Id> <!-- Neurotoxin: AOE Poison (New Ability) -->
+      <EffectId>215</EffectId> <!-- Effect is from 'Bio: Toad' -->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>360</Id> <!-- Time Blast: AOE Slow  (New Ability) -->
+      <EffectId>218</EffectId> <!-- Effect is from 'Bio: Stone' -->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>361</Id> <!-- Divine Strike (New Ability) -->
+      <EffectId>255</EffectId> <!-- Effect is from 'Climhazzard' -->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>362</Id> <!-- Adrenaline Rush (New Ability) -->
+      <EffectId>159</EffectId> <!-- Effect is from 'Shout' -->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>363</Id> <!-- DEATH ULTIMA (New Ability) -->
+      <EffectId>236</EffectId> <!-- Effect is from 'Blind 2' -->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>364</Id> <!-- PLUTON (New Ability) -->
+      <EffectId>259</EffectId> <!-- Effect is from 'Omnislash' -->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>365</Id> <!-- Holy Raikami (New Ability) -->
+      <EffectId>22</EffectId> <!-- Effect is from 'Thundaga' -->
+    </AbilityEffectNumberFilter>
+    <AbilityEffectNumberFilter>
+      <Id>366</Id> <!-- Guriin Shinigami (New Ability) -->
+      <EffectId>233</EffectId> <!-- Effect is from 'Toad2' -->
+    </AbilityEffectNumberFilter>
+  </Entries>
+</AbilityEffectNumberFilterData>

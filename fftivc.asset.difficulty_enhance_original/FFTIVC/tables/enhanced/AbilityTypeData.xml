@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+This table file is used to overwrite the game's hardcoded ability animation table.
+
+This table is used to determine which animation(s) are used when an ability is executed.
+Refer to: https://ffhacktics.com/wiki/Animations_(Tab)
+
+You can use this file as a base to edit Ability Animation data in your mod.
+Simply copy this file to your mod's folder under FFTIVC/tables/<enhanced/classic/combined>/AbilityTypeData.xml.
+
+IMPORTANT: You are free to remove everything and **SHOULD ONLY LEAVE ELEMENTS THAT YOU HAVE EDITED** to avoid conflicts between mods.
+Only properties that are actually included in this file will be tracked as edited. Properties not edited will inherit their
+value from the original table or, from other mods making changes depending on mod order.
+
+IMPORTANT 2: The Id property must NOT be removed for nodes that you're leaving here!
+
+IMPORTANT 3: Same ids as AbilityData. Id cannot be more than 453 (hardcoded table size is 454).
+-->
+
+<AbilityTypeTable>
+  <Version>1</Version>
+  <Entries>
+  <AbilityType>
+      <Id>225</Id> <!-- Bomblet / コボム / Jet de mini bombos / Zwerg-Bomber -->
+      <ChargeEffectType>17</ChargeEffectType> <!-- 10 to 17 -->
+      <AnimationId>76</AnimationId> <!-- 65 to 76 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+ <AbilityType>
+      <Id>274</Id> <!-- Bloodfeast / ミュウチレイト / Mutilation / Verstümmeln -->
+      <ChargeEffectType>7</ChargeEffectType> <!-- ChargeEffectType edited from 10 to 7 to 18 to 7 -->
+      <AnimationId>0</AnimationId> <!-- AnimationId Changed from 62 to 0 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>283</Id> <!-- Venom Fang / 毒牙 / Croc empoisonné / Giftzahn -->
+      <ChargeEffectType>17</ChargeEffectType> <!-- 10 to 17 -->
+      <AnimationId>113</AnimationId> <!-- 69 to 113 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>288</Id> <!-- Mind Blast / マインドブラスト / Choc mental / Geiststoß -->
+      <ChargeEffectType>1</ChargeEffectType> <!-- 11 to 1 -->
+      <AnimationId>43</AnimationId>
+      <BattleTextId>42</BattleTextId>
+    </AbilityType>  
+  <AbilityType>
+      <Id>296</Id> <!-- Zombie Touch (Undead) / ゾンビタッチ / Toucher zombifiant / Verfaulen -->
+      <ChargeEffectType>6</ChargeEffectType> <!-- 10 to 6 -->
+      <AnimationId>108</AnimationId> <!-- 71 to 108 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>299</Id> <!-- Oily Touch (Oil Smudge) / グリースタッチ / Toucher huileux / Schmierige Hand -->
+      <ChargeEffectType>17</ChargeEffectType> <!-- 10 to 17 -->
+      <AnimationId>76</AnimationId> <!-- 72 to 113 to 76 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>  
+  <AbilityType>
+      <Id>301</Id> <!-- Bewitching Gaze (Heretic Stasis) / あくまの視線 / Regard démoniaque / Teufelsblick -->
+      <ChargeEffectType>1</ChargeEffectType> <!-- 11 to 1 to 7 -->
+      <AnimationId>0</AnimationId> <!-- 100 to 44 to 92 to 62 to 98 to 43 to 0 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>  
+  <AbilityType>
+      <Id>304</Id> <!-- Doom (Tributed Gaze) / 死の宣告 / Glas / Todesurteil -->
+      <ChargeEffectType>1</ChargeEffectType> <!-- 11 to 1 -->
+      <AnimationId>60</AnimationId> <!-- 100 to 116 to 92 to 62 to 98 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>  
+  <AbilityType>
+      <Id>306</Id> <!-- Beak (Stone) / くちばし / Coup de bec / Schnabel -->
+      <ChargeEffectType>6</ChargeEffectType> <!-- 10 to 6 -->
+      <AnimationId>108</AnimationId> <!-- 106 to 108 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>309</Id> <!-- Peck (Steal Damage) / ビーキング / Choc de bec / Hacken -->
+      <ChargeEffectType>17</ChargeEffectType> <!-- 10 to 17 -->
+      <AnimationId>113</AnimationId> <!-- 104 to 113 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>    
+  <AbilityType>
+      <Id>311</Id> <!-- Snort (Allure) / はないき / Souffle nasal / Schnauben -->
+      <ChargeEffectType>6</ChargeEffectType> <!-- 10 to 6 -->
+      <AnimationId>108</AnimationId> <!-- 106 to 108 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>312</Id> <!-- Squeal (Angelic Revive) / はないき / Souffle nasal / Schnauben -->
+      <ChargeEffectType>10</ChargeEffectType> <!-- Crouch -->
+      <AnimationId>43</AnimationId> <!-- 77 to 43 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>    
+  <AbilityType>
+      <Id>316</Id> <!-- Guardian Nymph (Guard Boost) / まもりの精 / Esprit bouclier / Schutzgeist -->
+      <ChargeEffectType>11</ChargeEffectType>
+      <AnimationId>43</AnimationId> <!-- AnimationId changed from 77 to 43 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>317</Id> <!-- Shell Nymph (Shell Guard) / 貝の精 / Esprit barrière / Muschelgeist -->
+      <ChargeEffectType>11</ChargeEffectType>
+      <AnimationId>43</AnimationId> <!-- 77 to 43 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>321</Id> <!-- Feral Spin (Invoke) / ふりまわす / Pioche fulgurante / Schlinge -->
+      <ChargeEffectType>10</ChargeEffectType> <!-- ChargeEffectType edited from 10 to 18 -->
+      <AnimationId>60</AnimationId> <!-- AnimationId changed from to 0 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>  
+  <AbilityType>
+      <Id>323</Id> <!-- Beef Up (Strength UP) / なめる / Coup de langue / Lecken -->
+      <ChargeEffectType>10</ChargeEffectType> <!-- Crouch Charging 10 -->
+      <AnimationId>34</AnimationId> <!-- AnimationId 34 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>  
+  <AbilityType>
+      <Id>326</Id> <!-- Lick (Reflecta) / なめる / Coup de langue / Lecken -->
+      <ChargeEffectType>17</ChargeEffectType> <!-- Changed from 10 to 17 -->
+      <AnimationId>43</AnimationId> <!-- AnimationId changed from 83 to 43 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>331</Id> <!-- Heave (Ōkami Strike) / なめる / Coup de langue / Lecken -->
+      <ChargeEffectType>10</ChargeEffectType>
+      <AnimationId>104</AnimationId> <!-- AnimationId changed to 104 -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>  
+  <AbilityType>
+      <Id>359</Id> <!-- Neurotoxin (New Ability) -->
+      <ChargeEffectType>17</ChargeEffectType> <!-- Throw Animation -->
+      <AnimationId>76</AnimationId> <!-- Throw (Animation Delay) -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>360</Id> <!-- Time Blast (New Ability) -->
+      <ChargeEffectType>17</ChargeEffectType> <!-- Throw Animation -->
+      <AnimationId>76</AnimationId> <!-- Throw (Animation Delay) -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>361</Id> <!-- Divine Strike (New Ability) -->
+      <ChargeEffectType>7</ChargeEffectType> <!-- Strike -->
+      <AnimationId>0</AnimationId> <!-- Attack in Place -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>362</Id> <!-- Adrenaline Rush (New Ability) -->
+      <ChargeEffectType>17</ChargeEffectType> <!-- Crouch -->
+      <AnimationId>34</AnimationId> <!-- Charge-Up -->
+      <BattleTextId>0</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>363</Id> <!-- Angel of Death (New Ability) -->
+      <ChargeEffectType>2</ChargeEffectType>
+      <AnimationId>0</AnimationId>
+    </AbilityType>
+  <AbilityType>
+      <Id>364</Id> <!-- PLUTON (New Ability) -->
+      <ChargeEffectType>2</ChargeEffectType>
+      <AnimationId>0</AnimationId>
+    </AbilityType>
+  <AbilityType>
+      <Id>365</Id> <!-- Holy Raikami (New Ability) -->
+      <ChargeEffectType>1</ChargeEffectType>
+      <AnimationId>43</AnimationId> <!-- Chant Spell -->
+      <BattleTextId>22</BattleTextId>
+    </AbilityType>
+  <AbilityType>
+      <Id>366</Id> <!-- Guriin Shinigami (New Ability) -->
+      <ChargeEffectType>1</ChargeEffectType>
+      <AnimationId>43</AnimationId>  <!-- Chant Spell -->
+    </AbilityType>             
+  </Entries>
+</AbilityTypeTable>
