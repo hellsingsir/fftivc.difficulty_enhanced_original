@@ -3,11 +3,11 @@ FFTIVC: Difficulty Enhanced Mod V1.01 - Original Edition (PSX RENAME)
 
 Created by ninjere
 
-Made for NG/NG+ Playthrough for FFT: The Ivalice Chronicles. 
+Made for NG+ Playthrough for FFT: The Ivalice Chronicles. 
 
 Feel overpowered?
 Looted every item from the Deep Dungeon in your first playthrough? 
-This mod is intended to revamp the NG/NG+ replay value.
+This mod is intended to revamp the NG+ replay value.
 Recommended for a challenging playthrough.
 
 Requires FFTIVC Mod Loader & Reloaded II
