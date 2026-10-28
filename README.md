@@ -7,7 +7,7 @@ Made for NG+ Playthrough for FFT: The Ivalice Chronicles.
 
 Feel overpowered?
 Looted every item from the Deep Dungeon in your first playthrough? 
-This mod is intended to revamp the NG+ replay value.
+
 Recommended for a challenging playthrough.
 
 Requires FFTIVC Mod Loader & Reloaded II
